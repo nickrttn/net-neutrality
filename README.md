@@ -1,4 +1,4 @@
-# The death of net neutrality in the United States and it's consequences for European internet users.
+# The death of net neutrality in the United States and its consequences for European internet users.
 
 This repository contains the source code for an article, with datavisualisations, about net neutrality. It explains the topic, lays out what happened to net neutrality and the policies designating cable companies as common carriers in the United States, then goes on to analyze the possible consequences of net neutrality's demise in the US for European internet users in the short and long term.
 
