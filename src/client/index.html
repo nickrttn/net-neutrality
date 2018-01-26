@@ -84,10 +84,17 @@
     </section>
     <section data-component="article-chapter">
       <h2>What is the impact on European internet users?</h2>
-      <p>The impact on European internet users is potentially large. As a European internet user myself, I recorded internet traffic on my laptop for around half an hour. During that time, I was working on this article, looking for references on net neutrality, doing research on data visualisation methods, and looking at readme files for several software packages. In other words, I was using the internet. During that time, my computer sent over 70,000 packets to destinations around the world.</p>
-      <div data-component="article-bar-chart">
+      <p>The impact on European internet users is potentially large. As a European internet user myself, I recorded all internet traffic on my laptop for around half an hour. During that time, I was working on this article, looking for references on net neutrality, doing research on data visualisation methods, and looking at readme files for several software packages. In other words, I was using the internet. During that time, my computer sent and received over 200,000 packets to destinations around the world. After filtering and aggregating, I found that my computer had sent and received data from 330 unique <abbr title="Internet Protocol">IP</abbr> addresses. I was able to find the geographical location of those IP addresses using <a href="https://freegeoip.net/">freegeoip.net</a>.</p>
+
+      <div data-component="bar-chart"  data-file="geodata-aggregate" data-filetype="json">
+        <h3>Geographical distribution of unique IP addresses</h3>
         <svg viewBox="0 0 960 480"></svg>
       </div>
+
+      <p>The lion's share of my internet traffic goes to the United States. When I recorded the packets, I was in the Netherlands, which is most likely why it comes in a close second. Ireland has a number of datacenters for Google and Amazon AWS, explaining the third place. I find it fairly strange that Austria is higher on the list than Germany. They aren't known for datacenter hosting or great infrastructure. I'm a little concerned about the single IP address in Romania, as it is a well-known hackers paradise.</p>
+
+      <p>Interpolating this to the general population doesn't make </p>
+
       <i>PACKET DATA VIZ HERE</i>
       <h3>Short term</h3>
       <h3>Long term</h3>
@@ -107,6 +114,7 @@
       </p>
     </section>
   </artice>
+  <script src="./scripts/main.js" charset="utf-8"></script>
 </body>
 
 </html>

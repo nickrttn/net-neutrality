@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: "Input Sans Condensed", Menlo, Consolas, monospace;
+  font-family: 'Input Sans Condensed', Menlo, Consolas, monospace;
   font-variant: common-ligatures;
   line-height: var(--fontScaleRatio);
   margin: 0;
@@ -69,7 +69,7 @@ a {
 }
 
 /* COMPONENT STYLING */
-[data-component="article-header"] {
+[data-component='article-header'] {
   display: flex;
   flex-flow: column nowrap;
   margin-bottom: 12vw;
@@ -91,7 +91,7 @@ a {
   @media screen and (min-width: 50em) {
     position: relative;
 
-    [data-component="article-title"] {
+    [data-component='article-title'] {
       position: absolute;
       margin-left: 5vw;
       max-width: calc(35em + 10vw);
@@ -113,7 +113,7 @@ a {
   }
 }
 
-[data-component="article-title"] {
+[data-component='article-title'] {
   display: block;
   padding: 0 1.5em;
   background: black;
@@ -130,22 +130,47 @@ a {
   }
 }
 
- 
-
-[data-component="article-chapter"] {
+[data-component='article-chapter'] {
   display: block;
   padding: 0 5vw;
 
   h2 {
-    margin: 0 0 .5em;
+    margin: 0 0 0.5em;
   }
 }
 
-[data-component="article-chapter"] {
+[data-component='article-chapter'] {
   margin-bottom: 5vw;
 }
 
-[data-component="article-author-info"]{
+[data-component='article-author-info'] {
   color: white;
   font-size: 0.9em;
+}
+
+[data-component='bar-chart'] {
+  .axis {
+    font-family: inherit;
+    font-size: 0.7em;
+  }
+
+  .domain {
+    display: none;
+  }
+
+  .tick {
+    line {
+      stroke: lightgrey;
+      stroke-dasharray: 2 4;
+    }
+  }
+
+  .value {
+    font-size: 0.7em;
+  }
+
+  rect {
+    shape-rendering: crispEdges;
+    fill: var(--purple);
+  }
 }

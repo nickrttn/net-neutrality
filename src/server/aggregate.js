@@ -27,7 +27,7 @@ async function process(arr) {
     if (el.country_code === '') {
       if (!('unknown' in acc)) {
         acc['unknown'] = {
-          countryCode: 'XX',
+          countryCode: '??',
           countryName: 'Unknown',
           packets: new Count(),
         };

@@ -50,17 +50,40 @@ const count = new Count();
 
 function ondata(obj) {
   const ip = jp.value(obj, '$..ip');
-  if (ip && 'ip.dst' in ip) {
-    const addr = ip['ip.dst'];
-    if (!isReservedIP(addr)) {
-      try {
-        addresses.add(ip['ip.dst']);
-      } catch (err) {
-        logger.error(err);
-      } finally {
-        oninsert();
+  const ip6 = jp.value(obj, '$..ipv6');
+
+  if (ip6) {
+    ['ipv6.src', 'ipv6.dst'].forEach(el => {
+      if (el in ip6) {
+        const addr = ip6[el];
+        if (!isReservedIP(addr)) {
+          try {
+            addresses.add(ip6[el]);
+          } catch (err) {
+            logger.error(err);
+          } finally {
+            oninsert();
+          }
+        }
       }
-    }
+    });
+  }
+
+  if (ip) {
+    ['ip.dst', 'ip.src'].forEach(el => {
+      if (el in ip) {
+        const addr = ip[el];
+        if (!isReservedIP(addr)) {
+          try {
+            addresses.add(ip[el]);
+          } catch (err) {
+            logger.error(err);
+          } finally {
+            oninsert();
+          }
+        }
+      }
+    });
   }
 }
 
