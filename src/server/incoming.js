@@ -95,22 +95,22 @@ async function getgeoing() {
   const arr = Array.from(addresses);
   const responses = await Promise.all(arr.map(ip => axios(`${url}/${ip}`)));
   const geodata = responses.map(res => res.data);
-  onfetch(geodata);
+  onfetch(JSON.stringify(geodata));
 }
 
 async function onfetch(data) {
   const dest = path.join(__dirname, '..', 'data', 'ipgeodata.json');
 
   try {
-    const res = await writeFile(dest, data);
-    onwrite(res);
+    await writeFile(dest, data);
+    onwrite();
   } catch (err) {
     onerror(err);
   }
 }
 
-function onwrite(res) {
-  logger.info(`Data file written successfully with response ${res}`);
+function onwrite() {
+  logger.info(`Data file written successfully.`);
 }
 
 function onerror(err) {
