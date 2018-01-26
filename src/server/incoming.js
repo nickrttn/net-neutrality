@@ -1,0 +1,134 @@
+const pino = require('pino');
+const path = require('path');
+const { promisify } = require('util');
+const fs = require('fs');
+const { MongoClient } = require('mongodb');
+const { default: isReservedIP } = require('martian-cidr');
+const axios = require('axios');
+const jp = require('jsonpath');
+
+const writeFile = promisify(fs.writeFile);
+
+// Create an instance of the logger
+const pretty = pino.pretty();
+pretty.pipe(process.stdout);
+const logger = pino(
+  {
+    name: 'analysis',
+    safe: true,
+  },
+  pretty,
+);
+
+const addresses = new Set();
+
+// Instantiate a new Count object for a little bookkeeping
+const count = new Count();
+
+(async function() {
+  let client, db, collection;
+
+  try {
+    // Use connect method to connect to the Server
+    client = await MongoClient.connect('mongodb://localhost:32768');
+
+    db = client.db('packet-analysis');
+    collection = db.collection('packets');
+  } catch (err) {
+    logger.error(err);
+  }
+
+  if (collection) {
+    // Create a cursor from MongoDB documents
+    const cursor = await collection.find({});
+    const documentStream = cursor.stream();
+
+    documentStream.on('data', ondata);
+    documentStream.on('end', () => onend(client));
+  }
+})();
+
+function ondata(obj) {
+  const ip = jp.value(obj, '$..ip');
+  if (ip && 'ip.dst' in ip) {
+    const addr = ip['ip.dst'];
+    if (!isReservedIP(addr)) {
+      try {
+        addresses.add(ip['ip.dst']);
+      } catch (err) {
+        logger.error(err);
+      } finally {
+        oninsert();
+      }
+    }
+  }
+}
+
+function oninsert() {
+  count.increase();
+
+  if (count.getCount() % 10000 === 0) {
+    logger.info(`\nProcessed ${count.getCount()} leafs.\n\n`);
+  }
+
+  return;
+}
+
+function onend(client) {
+  // Close the DB connection
+  client.close();
+
+  // Inform the user
+  logger.info(
+    `\nProcessed ${count.getCount()} nodes, inserted ${
+      addresses.size
+    } unique IP addresses.\n\n ----- Done. ----- \n\n`,
+  );
+
+  getgeoing();
+
+  return;
+}
+
+async function getgeoing() {
+  const url = 'https://freegeoip.net/json';
+  const arr = Array.from(addresses);
+  const responses = await Promise.all(arr.map(ip => axios(`${url}/${ip}`)));
+  const geodata = responses.map(res => res.data);
+  onfetch(geodata);
+}
+
+async function onfetch(data) {
+  const dest = path.join(__dirname, '..', 'data', 'ipgeodata.json');
+
+  try {
+    const res = await writeFile(dest, data);
+    onwrite(res);
+  } catch (err) {
+    onerror(err);
+  }
+}
+
+function onwrite(res) {
+  logger.info(`Data file written successfully with response ${res}`);
+}
+
+function onerror(err) {
+  logger.error(err);
+}
+
+/**
+ * Count is a very simple, optimized counter class that keeps track of an amount for you.
+ * It has two methods you can use, increase() (by 1) and getCount().
+ */
+function Count() {
+  this.count = 0;
+}
+
+Count.prototype.increase = function(n) {
+  this.count += n || 1;
+};
+
+Count.prototype.getCount = function() {
+  return this.count;
+};

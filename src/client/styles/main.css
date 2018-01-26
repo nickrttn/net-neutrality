@@ -1,0 +1,151 @@
+:root {
+  --purple: hsl(247, 100%, 66%);
+  --green: hsl(115, 63%, 49%);
+  --fontScaleRatio: 1.6;
+  --fontScale1: 1.125em;
+  --fontScale2: 1.8em;
+  --fontScale3: 2.88em;
+  --fontScale4: 4.608em;
+  --fontScale5: 7.373em;
+  --fontScale7: 18.874em;
+}
+
+/* GLOBAL STYLING */
+
+html {
+  box-sizing: border-box;
+  font-size: 112.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Input Sans Condensed", Menlo, Consolas, monospace;
+  font-variant: common-ligatures;
+  line-height: var(--fontScaleRatio);
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* TYPOGRAPHY */
+h1,
+h2 {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: calc(var(--fontScale2) + 1vw);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: var(--fontScale2);
+}
+
+p {
+  max-width: 72ch;
+}
+
+abbr {
+  text-decoration-skip: ink;
+}
+
+a {
+  color: var(--purple);
+  text-decoration-skip: ink;
+
+  &:hover {
+    text-decoration-style: dotted;
+  }
+}
+
+/* COMPONENT STYLING */
+[data-component="article-header"] {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 12vw;
+
+  figure {
+    margin: 0;
+  }
+
+  figcaption {
+    margin-left: 5vw;
+    margin-top: 0.5em;
+    font-style: italic;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 50em) {
+    position: relative;
+
+    [data-component="article-title"] {
+      position: absolute;
+      margin-left: 5vw;
+      max-width: calc(35em + 10vw);
+      bottom: -5vw;
+    }
+
+    figcaption {
+      position: absolute;
+      top: calc(100% + 5vw);
+    }
+  }
+
+  @media screen and (min-width: 93.75em) {
+    figcaption {
+      position: absolute;
+      top: 100%;
+      left: calc(35em + 10vw + 1.5rem);
+    }
+  }
+}
+
+[data-component="article-title"] {
+  display: block;
+  padding: 0 1.5em;
+  background: black;
+  border: 0.5em solid var(--purple);
+  border-width: 0.5em 0 0 0;
+
+  h1 {
+    color: white;
+    margin-bottom: 0;
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+}
+
+ 
+
+[data-component="article-chapter"] {
+  display: block;
+  padding: 0 5vw;
+
+  h2 {
+    margin: 0 0 .5em;
+  }
+}
+
+[data-component="article-chapter"] {
+  margin-bottom: 5vw;
+}
+
+[data-component="article-author-info"]{
+  color: white;
+  font-size: 0.9em;
+}

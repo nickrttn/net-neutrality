@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-Medium.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-Regular.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-Black.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-ThinItalic.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-BlackItalic.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-BoldItalic.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-LightItalic.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-Italic.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-Thin.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-MediumItalic.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InputSansCondensed ExLight";
+  src: url("../fonts/InputSansCondensed-ExtraLightItalic.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "InputSansCondensed ExLight";
+  src: url("../fonts/InputSansCondensed-ExtraLight.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Input Sans Condensed";
+  src: url("../fonts/InputSansCondensed-Light.woff2") format("woff2"),
+    url("../fonts/InputSansCondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

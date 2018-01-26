@@ -1,0 +1,33 @@
+{
+  "name": "storytelling-with-data",
+  "version": "0.1.0",
+  "description": "A datavisualisation about the effects of the end of US net neutrality on EU internet users.",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-preset-env": "^1.6.1",
+    "json-write-stream": "^1.0.0",
+    "jsonfilter": "^1.1.2",
+    "jsonpath": "^1.0.0",
+    "martian-cidr": "^1.0.4",
+    "mongodb": "^3.0.1",
+    "parcel-bundler": "^1.5.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.0.0",
+    "postcss-nested": "^3.0.0",
+    "stream-json": "^0.5.2"
+  },
+  "scripts": {
+    "start": "parcel src/client/index.html",
+    "build": "parcel build src/client/index.html",
+    "dev:data": "nodemon src/server/index.js",
+    "build:data": "NODE_ENV=production node src/server/index.js"
+  },
+  "author": "Nick Rutten <hello@nickrttn.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "nested": "0.0.1-pre2",
+    "nodemon": "^1.14.6",
+    "pino": "^4.10.2"
+  }
+}
