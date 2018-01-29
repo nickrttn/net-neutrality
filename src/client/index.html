@@ -12,18 +12,19 @@
 </head>
 
 <body>
-  <artice id="root">
+  <article id="root">
     <header data-component="article-header">
       <div data-component="article-title">
         <h1>The death of net neutrality in the
           <abbr title="United States">US</abbr> and what it means for European internet users</h1>
-          <footer data-component="article-author-info">
-              <address>
-                <p>Written by
-                  <a href="https://twitter.com/nickrttn" rel="author">Nick Rutten</a>. Published
-                  <time pubdate datetime="2017-01-24" title="Januari 24th, 2018">Januari 24<sup>th</sup>, 2017</time>.</p>
-              </address>
-            </footer>
+        <footer data-component="article-author-info">
+          <address>
+            <p>Written by
+              <a href="https://twitter.com/nickrttn" rel="author">Nick Rutten</a>. Published
+              <time pubdate datetime="2017-01-24" title="Januari 24th, 2018">Januari 24
+                <sup>th</sup>, 2017</time>.</p>
+          </address>
+        </footer>
       </div>
       <figure>
         <img src="images/net-neutrality.jpg" alt="Image of protesters in front of Time Warner Cable office holding signs saying “Don't block my net”.">
@@ -33,40 +34,54 @@
     </header>
 
     <section data-component="article-chapter">
-      <h2>What is net neutrality?</h2>
-      <p>Net neutrality is the concept of a neutral Internet. Or any network, really. It is the principle that internet service providers, which you are connected to right now, must treat all data on the Internet the same. They cannot discriminate—or charge differently—by user, content, website, platform, application, device or communication method. A network for distributing public information, like the Internet, is at its most useful when all data is treated equally.</p>
-      <h3>The Open Internet</h3>
-      <p>A neutral internet is an ‘open internet’, under which the full resources of the internet and any means to use it are easily accessible to individuals, companies and other organizations.</p>
+      <h2>A neutral internet</h2>
+
+        <p>Net neutrality is a complex subject. It is best explained through metaphore. A network of highways shares a lot of properties with an internet where net neutrality is the rule.</p>
+
+      <div data-component="animation" id="net-neutrality">
+          <svg viewBox="0 0 768 150" width="768" height="150">
+            <g class="bottom">
+              <use xlink:href="#road" width="362" height="72"></use>
+            </g>
+            <g class="car red">
+              <use xlink:href="#car-red" width="55" height="30"></use>
+              <use xlink:href="#car-red" width="55" height="30"></use>
+              <use xlink:href="#car-red" width="55" height="30"></use>
+            </g>
+            <g class="car green">
+              <use xlink:href="#car-green" width="55" height="30"></use>
+              <use xlink:href="#car-green" width="55" height="30"></use>
+              <use xlink:href="#car-green" width="55" height="30"></use>
+            </g>
+            <g class="top">
+              <g class="computer">
+                <use xlink:href="#computer" width="121" height="108"></use>
+                <text y="140" x="-10">Your computer</text>
+              </g>
+              <g class="cloud">
+                <use xlink:href="#cloud" width="216" height="108"></use>
+                <text y="140" x="40">The internet</text>
+              </g>
+            </g>
+          </svg>
+      </div>
+
+      <p>The internet with net neutrality is comparable with a highway. Anyone is free to use it for any sort of traffic in whatever way they like. The maintainers of the network of roads, usually do not give one car priority over the other. To keep it usable for everyone, the government maintains the road using your taxes.</p>
+      <p>A neutral internet is much the same. The physical network is owned by a company (or government). You pay them a fee to use the network in whatever way you want. They maintain the network using your fee.</p>
+      <p>Net neutrality is the principle that internet service
+        providers, which you are connected to right now, must treat all data on the Internet the same. A network for
+        distributing public information, like the Internet, is at its most useful when all data is treated equally.</p>
     </section>
+
     <section data-component="article-chapter">
-      <h2>
-        Why does net neutrality matter?
-      </h2>
+      <h2>Why does net neutrality matter?</h2>
 
       <p>There are very strong arguments in favor of net neutrality.</p>
 
-      <ul data-component="article-interactive-list">
-        <li>
-          <h3>Free speech</h3>
-          <div></div>
-        </li>
-        <li>
-          <h3>Control of your own data</h3>
-          <div></div>
-        </li>
-        <li>
-          <h3>Digital rights and freedoms</h3>
-          <div></div>
-        </li>
-        <li>
-          <h3>User Experience</h3>
-          <div>(slow loading)</div>
-        </li>
-        <li>
-          <h3>Competition and innovation</h3>
-          <div></div>
-        </li>
-      </ul>
+      <svg viewBox="0 0 574 475" width="575" height="475" data-component="arguments">
+        <use xlink:href="#arguments" width="574" height="475"></use>
+      </svg>
+
       <ul>
         <li>shaping opinions by owning network and media distributed over it; decreasing free speech</li>
         <li>lowering the barrier to entry for startups</li>
@@ -84,14 +99,25 @@
     </section>
     <section data-component="article-chapter">
       <h2>What is the impact on European internet users?</h2>
-      <p>The impact on European internet users is potentially large. As a European internet user myself, I recorded all internet traffic on my laptop for around half an hour. During that time, I was working on this article, looking for references on net neutrality, doing research on data visualisation methods, and looking at readme files for several software packages. In other words, I was using the internet. During that time, my computer sent and received over 200,000 packets to destinations around the world. After filtering and aggregating, I found that my computer had sent and received data from 330 unique <abbr title="Internet Protocol">IP</abbr> addresses. I was able to find the geographical location of those IP addresses using <a href="https://freegeoip.net/">freegeoip.net</a>.</p>
+      <p>The impact on European internet users is potentially large. As a European internet user myself, I recorded all internet
+        traffic on my laptop for around half an hour. During that time, I was working on this article, looking for references
+        on net neutrality, doing research on data visualisation methods, and looking at readme files for several software
+        packages. In other words, I was using the internet. During that time, my computer sent and received over 200,000
+        packets to destinations around the world. After filtering and aggregating, I found that my computer had sent and
+        received data from 330 unique
+        <abbr title="Internet Protocol">IP</abbr> addresses. I was able to find the geographical location of those IP addresses using
+        <a href="https://freegeoip.net/">freegeoip.net</a>.</p>
 
-      <div data-component="bar-chart"  data-file="geodata-aggregate" data-filetype="json">
+      <div data-component="bar-chart" data-file="geodata-aggregate" data-filetype="json">
         <h3>Geographical distribution of unique IP addresses</h3>
         <svg viewBox="0 0 960 480"></svg>
       </div>
 
-      <p>The lion's share of my internet traffic goes to the United States. When I recorded the packets, I was in the Netherlands, which is most likely why it comes in a close second. Ireland has a number of datacenters for Google and Amazon AWS, explaining the third place. I find it fairly strange that Austria is higher on the list than Germany. They aren't known for datacenter hosting or great infrastructure. I'm a little concerned about the single IP address in Romania, as it is a well-known hackers paradise.</p>
+      <p>The lion's share of my internet traffic goes to the United States. When I recorded the packets, I was in the Netherlands,
+        which is most likely why it comes in a close second. Ireland has a number of datacenters for Google and Amazon AWS,
+        explaining the third place. I find it fairly strange that Austria is higher on the list than Germany. They aren't
+        known for datacenter hosting or great infrastructure. I'm a little concerned about the single IP address in Romania,
+        as it is a well-known hackers paradise.</p>
 
       <p>Interpolating this to the general population doesn't make </p>
 
@@ -113,8 +139,534 @@
         FIGHT FOREVER
       </p>
     </section>
-  </artice>
-  <script src="./scripts/main.js" charset="utf-8"></script>
+  </article>
+
+  <svg>
+    <defs>
+      <symbol id="computer" viewBox="0 0 142.77 127.51" width="121" height="108">
+        <path fill="#6a7162" d="M142.77 121.6v2.88H30.33v-2.88h112.44z" />
+        <path fill="#969f88" d="M142.77 121.6H30.33l-.12-3.01 112.56-.04v3.05z" />
+        <path fill="#acb69d" d="M142.77 118.55l-103.43-.04.17-3.04 100.29.01v-9.13l2.97-.02v12.22z" />
+        <path fill="#6a7162" d="M136.78 97.22h3.04v3.04H33.28v-3.04h103.5z" />
+        <path fill="#acb69d" d="M36.37 94.19h-3.08v-3.04l.02-.02H139.8l.01.02v3.04H36.37zM33.29 2.88V0h106.52v2.88l-.01.02H33.31l-.02-.02z"
+        />
+        <path fill="#0f100d" d="M36.37 94.19h100.37l.04 3.03H36.32l.05-3.03z" />
+        <path fill="#acb69d" d="M33.29 91.15h-2.88V2.88h2.88l.02.02v88.23l-.02.02zM139.81 2.88h2.89v88.27h-2.89l-.01-.02V2.9l.01-.02z"
+        />
+        <path fill="#0f100d" d="M42.38 115.47h-2.87l-.17 3.04-15.2.08v-3.08l-.06.07 12.19-.18.13-2.91h5.97l.01 2.98z" />
+        <path fill="#687060" d="M18.05 124.61v2.9H2.9v-2.9l-.02.03h15.19l-.02-.03z" />
+        <path fill="#acb69d" d="M5.91 115.5v-3.01h9.19l.03 2.98-3.01.16-.27 5.92-2.94-.15v-5.89H5.88l.03-.01zm27.4-.1l-3.09.01.12-9.08
+                2.96.02.01 9.05z" />
+        <path fill="#0f100d" d="M15.13 115.47l-.03-2.98h8.98v3.09l.06-.07-9.01-.04z" />
+        <path fill="#969f88" d="M2.9 124.61H0v-6.08h2.89l-.01-.03v6.14l.02-.03zm15.16-6.08h2.9v6.08h-2.9l.01.03.01-6.14-.02.03zm124.71-12.2l-2.97.02-.02-3.02.05-.05
+                2.93.01.01 3.04z" />
+        <path fill="#7a806f" d="M2.89 118.53v-3.03h3.02l-.03.01v2.99h-3l.01.03z" />
+        <path fill="#969f88" d="M33.3 106.35l-2.96-.02v-3.04l2.93-.01.05.05-.02 3.02z" />
+        <path fill="#7a806f" d="M15.13 115.47l3.01.07-.08 2.99.02-.03h-2.87l-.33-3.02.25-.01zm127.63-12.18l-2.93-.01-.04-3.02h2.97v3.03zm-109.49-.01l-2.93.01v-3.03h2.97l-.04
+                3.02z" />
+        <path fill="#bfcbaf" d="M139.8 106.35v9.13H63.69v-5.9l-2.89-.38-.15-2.84zm-24.49 6v-2.73H79.1v2.73zm9.15-2.77h-2.74v2.71h2.74v-2.71zm6.11
+                0h-2.82v2.72h2.82v-2.72zm-97.26 5.82v-9.05h24.37l-.16 2.87-2.89.37v5.88H42.38v-5.89h-6l-.13 5.82zm18.13-5.84h-5.75v2.72h5.75v-2.72z"
+        />
+        <path fill="#6a7162" d="M54.63 115.48v-5.88l2.89-.37.16-2.87h2.97l.15 2.84 2.9.38v5.9h-9.07z" />
+        <path fill="#969f88" d="M33.27 103.28l.04-3.02h106.48l.04 3.02-.05.05H33.32l-.05-.05z" />
+        <path fill="#bfcbaf" d="M139.8 2.9v88.23H33.31V2.9zM130.46 85V9.15H42.64V85z" />
+        <path fill="#6a7162" d="M36.4 112.49v-2.91h5.97v2.91H36.4z" />
+        <path fill="#bfcbaf" d="M14.88 115.48l.33 3.02h2.87l-.01 6.14H2.88v-6.14h3v-2.99h3.03v5.89l2.94.15.27-5.92 2.76-.15z" />
+        <path fill="#acb69d" d="M33.32 103.33h106.46l.02 3.02H33.3l.02-3.02z" />
+        <path fill="#6a7162" d="M115.31 112.31H79.1v-2.73h36.21v2.73z" />
+        <path fill="#00c23d" d="M124.46 109.54v2.71h-2.74v-2.71h2.74zm6.11.04v2.72h-2.82v-2.72h2.82z" />
+        <path fill="#6a7162" d="M51.44 109.56v2.72h-5.75v-2.72h5.75z" />
+        <path fill="#687060" d="M130.46 85H42.64V9.15h87.82V85zm-85-48.6v45.44h81.94V12.09h-82v24.29z" />
+        <path fill="#0f100d" d="M91.14 12.09h36.34v69.73H45.54V60.73h11.83l.54-2.87 2.78-.44v-2.79h5.81l.54-2.86 2.78-.43v-2.8h5.75l.63-2.84
+                2.52-.47.49-2.58 2.83-.48v-5.56l2.99-.5v-8.87l2.92-.17.27-5.7 2.92-.48v-8.8z" />
+        <path fill="#31332e" d="M78.96 12.07l6.08.01-.01 15.16H82v5.74l-2.93.67-.28 5.5-2.68.53-.47 2.57-2.58.44-.42 2.6-2.82.43v2.82H64l-.54
+                2.85-2.77.44v2.8H51.9l-.71 3.05h-5.66l-.01-9.13h5.7l.67-2.95 5.5-.25.55-2.78 5.56-.26.47-2.71 2.6-.4.39-2.55
+                2.74-.62.26-5.49 2.69-.54.46-2.56 2.82-.48v-8.53l3.03-.69v-5.67z" />
+        <path fill="#40433c" d="M78.96 12.07v5.67l-3.03.69v8.53l-2.82.48-.46 2.56-2.69.54-.26 5.49-2.74.62-.39 2.55-2.6.4-.47
+                2.71-5.56.26-.55 2.78-5.5.25-.67 2.95h-5.7l-.02-12.17h5.72l.67-2.94 5.63-.28.28-5.8 5.98-.27V21.4l3.01-.51v-8.84l12.17.02z"
+        />
+        <path fill="#4f534b" d="M66.79 12.05v8.84l-3.01.51v5.69l-5.98.27-.28 5.8-5.63.28-.67 2.94H45.5V12.05h21.29z" />
+        <path fill="#252823" d="M85.03 27.24l.01-15.16 6.1.01v8.8l-2.92.48-.27 5.7-2.92.17zm-39.5 30.44h5.66l.71-3.05h8.79v2.79l-2.78.44-.54
+                2.87H45.54l-.01-3.05zm24.29-9.14v-2.82l2.82-.43.42-2.6 2.58-.44.47-2.57 2.68-.53.28-5.5 2.93-.67v-5.74h3.03v8.87l-2.99.5v5.56l-2.83.48-.49
+                2.58-2.52.47-.63 2.84h-5.75zm-9.13 6.09v-2.8l2.77-.44.54-2.85h5.82v2.8l-2.78.43-.54 2.86h-5.81z" />
+      </symbol>
+      <symbol id="cloud" viewBox="0 0 204 102" height="108">
+        <path fill="#fff" d="M204 102H45v-4h-8v-4h-4l-.85-4.25L20 90l.63-3.69L16 86v-8h-4v-5H8v-4H4v-4H0v-8h4v-4h8v-8h4v-8h4v-4h13l-1-4h4v-4h5V12h4V8h8V4h4V0h16.2v4.2l4.12-.13.08
+                4.33h4.2v7.8h4.2v-3.6h3.6l.6 4.2h3.6v3.6l4.2.6v7.8h4.2v-4.2h4.2v-12h4.2V8.4h12V4.2h4.2V0H204v102z" />
+        <path fill="#acd5fe" d="M85.64 73.5v3.76l3.84.54.46 3.66 3.48.21.74-4.06h15.63l.58-3.91 3.69-.07v7.75l-3.81.59-.23
+                3.74h-15.8l-.62 3.96h-7.65l-.63-3.88h-7.46l-.58-3.9-3.53-.12-.69 3.98H57.12v7.91l-3.76.24-.53-3.77-3.8-.53-.24-3.79h-7.65l-.63-4.03h-7.54l-.37-4.19-.02.02h7.82l.57-3.89
+                3.53-.11.62 3.96h15.73l.5 3.94h7.68l.61-3.86h7.45l.67-4.12h7.9l-.02-.03zm81.64 0v3.96h7.89l.51-3.77h7.75v7.87l-3.6.23-.52
+                3.81h-7.64l-.59-3.8h-7.59l-.48 3.71-3.61.43-.43 3.61-3.81.54-.23 3.69h-7.76l-.46-3.65-3.61-.44-.59-3.89h-7.5l-.56-3.85-3.64-.45-.11-3.78
+                3.8-.24.25-3.81h7.94v7.82h12.11l.52-3.82h7.47l.59-3.89 3.92-.25-.02-.03zM53.01 32.71v-3.76l3.8-.52.48-3.71h7.81v7.97H52.99l.02.02z"
+        />
+        <path d="M142.77 98.04l16.31-.08-.07-.06v4.1h-16.18v-4.02l-.06.06zM93.7 97.9v4.1H77.52v-4.02l-.06.06 16.31-.08-.07-.06zm-32.65
+                0v4.1H44.87v-4.02l-.06.06 16.3-.08-.06-.06zm138.79-61.01h4.1v16.18h-4.02l.06.06-.08-16.3-.06.06zM93.71 20.57h4.13v8h4.09l-.06-.06v4.09h-8.1V20.5l-.06.07zM73.43
+                4.09l-16.3.08.06.06V.13h16.19v4.02l.05-.06zm69.47-.08l-16.38.16.07.06V.14h16.26v3.93l.05-.06zm12.25 16.33h-8.24V8.18l-.05.06h4.01v8.03h4.22v4.13l.06-.06zm-49.06
+                4.22V12.32h4.08l-.06-.06V24.5h-4.08l.06.06zm8.03 73.56l12.38-.08-.06-.06v3.99h-12.26v-3.91l-.06.06zM40.78 24.56V12.24h4l-.06-.06V24.5h-4l.06.06z"
+        />
+        <path d="M110.17 12.32V8.24h12.25l-.06-.06v4.08h-12.25l.06.06zM32.69 89.73h-12.4l.01-3.92-.06.07h12.4l-.01 3.91.06-.06zm-.13-57.06v4.16H20.39l.07.05v-4.15h12.16l-.06-.06zm155.11
+                4.08v3.98h-12.18v-3.98l-.06.06h12.3l-.06-.06zM44.87 97.98H36.7V93.9l-.05.06h8.16v4.08l.06-.06zm142.8-8.16v4.15h-8.08l.06.06v-4.15h8.08l-.06-.06z"
+        />
+        <path fill="#acd5fe" d="M130.56 36.79l.2-3.95h7.74l.1 3.93h-8.06l.02.02z" />
+        <path d="M16.29 44.97v-8.03l4.16-.06-.06-.05v8.08h-4.16l.06.06zM52.97 8.18v4.01h-8.25l.06.05v-4h8.25l-.06-.06zM4.13
+                57.29V53.2h7.94v4.04l-8-.01.06.06zm183.6 32.59V85.9h8.05v3.92h-8.11l.06.06z" />
+        <path d="M4.04 65.32H.06v-7.99l4.07-.04-.06-.06-.09 8.15.06-.06zm12.19 12.31h4.01v8.24l.06-.06h-4.01v-8.24l-.06.06zm159.26-40.88h-4.08v-8.16l-.06.05h4.08v8.17l.06-.06zM77.52
+                97.98h-8.16V93.9l-.06.06h8.16v4.08l.06-.06zm24.35-4.16v4.09H93.7l.07.05v-4.08h8.16l-.06-.06zm4.17.14h8.03l.06
+                4.16.05-.06h-8.09V93.9l-.05.06zm65.23.08l8.38-.01-.06-.06v3.93h-8.27l.01-3.92-.06.06zm-4.01-.14v4.01h-8.24l.06.05-.01-4h8.25l-.06-.06zM77.4
+                8.3h4.14v8.1l.06-.06h-4.14v-8.1l-.06.06zm65.43 89.68h-8.16V93.9l-.06.06h8.16v4.08l.06-.06z" />
+        <path fill="#acd5fe" d="M32.6 77.59h-3.83l-.25-4.09-.02.03h3.83l.25 4.08.02-.02z" />
+        <path d="M146.91 8.18h-3.95l-.06-4.17-.05.06h4.01v4.17l.05-.06zm-24.49.06V4.28l4.16-.05-.06-.06v4.01h-4.16l.06.06zm69.34
+                65.31h4.07v4.08l.06-.06h-4.08v-4.08l-.05.06zM53.03 8.24V4.28l4.16-.05-.06-.06v4.01h-4.16l.06.06z" />
+        <path d="M195.83 77.63h3.94l.2 3.97h-4.08v-4.03l-.06.06zM36.7 93.9h-3.95l-.06-4.17-.06.06h4.02v4.17l.05-.06zM73.38
+                4.15h3.94l.09 4.15.05-.06h-3.87l-.16-4.15-.05.06zm53.12 93.89v-4.16h4l-.06-.06v4.16h-4l.06.06zM69.36 93.9l-4.14-.01.05.06v-3.93l4.03-.19v4.13l.06-.06zm36.73
+                0l-4.22-.08.06.06v-3.94h4.11v4.02l.05-.06z" />
+        <path d="M134.67 93.9l-4.23-.08.06.06v-3.94h4.11v4.02l.06-.06zm32.65.06v-3.98h3.91l.04 4.06.06-.06-4.07-.08.06.06zm-102.1-.07v3.96l-4.17.06.06.05v-4.01h4.16l-.05-.06zm24.54-77.55l-4.06.08.07.05v-4.09h3.93v4.02l.06-.06z"
+        />
+        <path d="M81.54 16.4l4.23.07-.07-.05v3.93h-4.1v-4.01l-.06.06zm8.16 0h3.96l.06 4.16.05-.06h-4.01v-4.16l-.06.06zm73.61
+                3.94l-4.21.08.06.06V16.5h4.1v3.9l.05-.06zm-4.21.08v3.98h-3.91l-.04-4.06-.06.06 4.07.08-.06-.06zm8.3 4h-4.09v-4.08l-.05.06h4.08v4.08l.06-.06zm-126.68.08v4.16h-4l.06.06v-4.16h4l-.06-.06z"
+        />
+        <path fill="#acd5fe" d="M81.58 28.6h-3.87l-.18-3.79 3.71-.28.32 4.1.02-.03z" />
+        <path d="M106.03 24.5v3.96l-4.16.05.06.06v-4.01h4.16l-.06-.06zm65.38 4.09h-3.96l-.06-4.17-.05.06h4.01v4.16l.06-.05zM32.62
+                32.73v-3.96l4.16-.05-.06-.06v4.01h-4.16l.06.06z" />
+        <path fill="#acd5fe" d="M81.56 28.63h3.87l.19 3.81-3.76.16-.28-4-.02.03zm65.33 4.06h-3.9l-.07-3.84 3.67-.14.28
+                4 .02-.02z" />
+        <path d="M195.89 32.67l-4.06.07.07.06v-4.09h3.93v4.02l.06-.06z" />
+        <path fill="#acd5fe" d="M52.99 32.69v3.89l-3.84.08-.14-3.68 4-.27-.02-.02zm93.88.02h3.87l.19 3.81-3.76.17-.28-4-.02.02z"
+        />
+        <path d="M187.73 36.81v-3.95l4.16-.06-.06-.06.01 4.01h-4.17l.06.06zm8.1-4.08h3.96l.05 4.16.06-.06h-4.01v-4.16l-.06.06z"
+        />
+        <path fill="#acd5fe" d="M130.54 36.77v3.87l-3.81.18-.16-3.75 3.99-.28-.02-.02z" />
+        <path d="M16.23 44.91v3.94l-3.97.18v-4.06h4.03l-.06-.06zm183.69 8.16v3.94l-3.98.21v-4.09h4.04l-.06-.06zm-4.17 12.24h-3.85v-3.92h3.85v3.92zm-191.77.07h4.17l-.01
+                4.01.06-.07H4.04v-4l-.06.06zm8.3 8.02H8.2v-4.08l-.06.07 4.09-.01v4.09l.05-.07z" />
+        <path fill="#acd5fe" d="M28.52 73.5h-3.9l-.07-3.82 3.63-.24.32 4.09.02-.03zm57.14.03v-3.87l3.81-.19.17 3.76-4
+                .27.02.03zm81.64 0v-3.87l3.81-.19.17 3.76-4 .27.02.03z" />
+        <path d="M191.81 73.49h-3.93l-.18-3.98h4.06v4.04l.05-.06zM16.29 77.57h-3.95l-.06-4.17-.05.07 4-.01v4.17l.06-.06z" />
+
+      </symbol>
+      <symbol id="car-red" viewBox="0 0 55 30.54" width="55" height="30">
+        <path d="M55 25.66h-1.21v-1.23h-1.24V23.2h1.22l.01-15.75-1.23-.12V6.11l1.23-.03V4.9H55v20.76z"/>
+        <path fill="#040101" d="M24.43 30.54h-1.2v-1.21h1.2v1.21z"/>
+        <path fill="#100504" d="M55 4.9h-1.22l.01-.03 1.21.01v.02zM23.23 29.33v1.21h-.02v-1.21h.02zm1.2 1.21v-1.21h.02v1.21h-.02z"/>
+        <path fill="#020101" d="M25.66 1.23v1.19l26.89.02v1.22h-9.77v1.21h-1.21l-.03-1.21h-7.3l.02 1.22 7.29.02v1.21l-11-.01.02-1.07L33 4.87V3.66h-8.55V1.23h1.21z"/>
+        <path fill="#010101" d="M22 29.31v-1.2H4.87l.01-1.23 2.45-.01v-1.21h1.23v1.21h9.77v-3.66h1.19l.13 2.45 3.58-.14.02-1.06h3.62v1.18l-2.44.14v1.09l-1.22.04v2.4H22zM4.87 3.66V2.43H22v-1.2h1.21l.03 2.43h1.19l.02 1.21 2.42.05v1.16h-3.64l-.13-1.21-3.56.03v2.42l-1.21.01V3.67H8.54v1.21H7.33V3.66H4.87z"/>
+        <path d="M1.21 22H0V8.54h1.21V22z"/>
+        <path fill="#040101" d="M1.21 8.54V6.09h1.22V4.87l1.23.01-1.22.02v3.64H1.21zm2.45 17.12H2.44v-1.21H1.21V22h.02v2.43h2.42l.01 1.23zM23.21 1.21V0h1.24v1.21h-1.24z"/>
+        <path d="M4.87 26.88H3.66v-1.22h1.22l-.01 1.22zM3.66 4.87V3.66h1.22v1.22l-1.22-.01z"/>
+        <path fill="#040101" d="M52.57 3.66h1.19v1.22h-1.21V3.66h.02z"/>
+        <path fill="#100504" d="M52.55 2.44l-26.89-.02 26.89.02zM22 29.31h1.21v.02L22 29.31zM53.76 4.88V3.66l.03 1.21-.03.01zm-1.19-1.22h-.02V2.44l.02 1.22z"/>
+        <path fill="#040101" d="M23.21 1.23H22l1.21-.02v.02zm2.45 0h-1.21v-.02l1.21.02z"/>
+        <path fill="#020101" d="M52.55 28.09l-26.89.02v1.2h-1.21v-2.43l8.55-.02-.13-1.22-2.29-.01.01-1.17h10.95v1.18l-7.28.02-.02 1.22h7.3l.03-1.2h1.19l.03 1.2 9.76.01v1.2z"/>
+        <path fill="#040101" d="M52.55 28.09v-2.43l1.24-.01v1.23h-1.23l-.01 1.21z"/>
+        <path fill="#100504" d="M24.45 29.31h1.21l-1.21.02v-.02z"/>
+        <path fill="#c83e29" d="M53.77 13.45l.01 6.09h-1.23v1.22h-1.22V22h-4.88v-2.46h1.21v-8.55h-1.21V8.54h4.89v1.24h1.22v3.67h1.21z"/>
+        <path fill="#910200" d="M53.77 13.45h-1.21V9.78h-1.22V8.54h-4.89l.01-2.42 6.09-.01v1.22l1.23.12-.01 6z"/>
+        <path fill="#d8705c" d="M46.45 22h4.88v-1.24h1.22v-1.22h1.21l.01 3.66h-1.22v1.23-.01l-6.1.01V22z"/>
+        <path fill="#c53c28" d="M53.76 4.88h.03l-.01 1.2-1.23.03V4.88h1.21z"/>
+        <path fill="#910200" d="M53.79 25.65l-.02-1.2h-1.19v1.19l1.16.01-1.19.01v-1.24.01h1.24v1.22zm-.02-2.45l-.01-3.66h.02l-.01 3.66z"/>
+        <path fill="#100504" d="M53.75 6.11l.03-.03-.03.03z"/>
+        <path fill="#c53c28" d="M24.45 29.31v.02h-1.24v-2.42l1.24-.03v2.43z"/>
+        <path fill="#910200" d="M30.55 6.1l11 .01v1.21l-9.77.03v1.19h-3.67v2.45h-1.23V7.32l3.66-.01.01-1.21zm22-2.44v1.22l-7.34.02v1.21h-3.66V4.87h-.01 1.24V3.66h9.77z"/>
+        <path fill="#78fdfd" d="M30.55 6.07l-1.21.02V4.88h-1.23V3.66H33v1.21h-2.45v1.2zm7.33-2.41h3.66v1.21h.01-3.67V3.66z"/>
+        <path fill="#c53c28" d="M24.45 1.21v2.45h-1.21l-.03-2.45h1.24z"/>
+        <path fill="#78fdfd" d="M36.66 4.87l-2.4.01-.02-1.22h2.42v1.21zM24.45 3.66h2.43v1.21h-2.43V3.66z"/>
+        <path fill="#f4f5f5" d="M26.88 4.87V3.66h1.23v1.22l.01-.01h-1.24zm9.78 0V3.66h1.22v1.21h-1.22z"/>
+        <path fill="#100504" d="M26.88 4.87l.02 1.22h3.64v.02H26.9v1.21h-.02V6.11h-3.67V4.9l.02 1.18h3.64V4.92l-2.42-.05h2.43zm9.81.01l4.86-.01v.03l-4.86-.02zm-6.14 1.19v-1.2H33l-2.43.16-.02 1.04zm3.71-1.19h2.38-2.38zm7.28-.01V3.66l.03 1.21h-.03zm-7.3-1.21l-.01 1.21.01-1.21z"/>
+        <path fill="#78fdfd" d="M19.52 23.21h-1.19v-3.67h-1.21V11h1.21V8.54h4.89v1.24h2.44V11h-1.22v8.56h1.22v3.67h1.21v1.22h-3.66v1.21h-3.65v-2.43zM23.21 22h1.23v-1.23h-1.23V22h-2.42v1.2h2.42V22z"/>
+        <path fill="#d8705c" d="M18.33 23.21v3.66H8.56v-1.21H7.33v-1.23h-1.2l-.15-2.45-1.08-.02v-2.42h1.22v1.23h1.21v2.44h1.22v1.21h8.56v-1.21h1.22z"/>
+        <path fill="#100504" d="M23.21 25.64v-1.21h3.67l-.02-4.88h.03v3.66h3.67v1.21h10.97l.04-1.2v1.2l3.64.02h-3.64v1.21h1.22v1.23l-.03-1.2h-1.19l-.03 1.2v-1.22h-4.85l4.85-.02v-1.18H30.59l-.01 1.17 2.42.03h-2.46v-1.21H26.9l-.02 1.21h-2.43l2.42-.02v-1.18h-3.62l-.04 1.18z"/>
+        <path fill="#c53c28" d="M4.88 26.88v-1.23l1.21-.01.01-1.18.01 2.41-1.23.01z"/>
+        <path fill="#d8705c" d="M6.11 26.87v-1.21h1.22v1.21H6.11z"/>
+        <path fill="#100504" d="M19.52 23.21l.04 2.43h3.65l-3.67-.12-.02-2.31zm4.93 3.67l-.02-.01.02-1.21v1.22zm-1.22 0l-.02.03.02-.03z"/>
+        <path fill="#910200" d="M7.33 4.88h1.21V3.67h9.79v3.66h-1.22V6.12H9.78v1.21H8.54v1.22H7.32v1.23H6.11v2.43H4.89l-.01-3.67h-.01 1.24V6.11h1.22V4.87v.01z"/>
+        <path fill="#53ebeb" d="M25.66 9.78h-2.44V8.54h-4.89V7.33l1.21-.01.04-2.43 3.63.01v1.21h3.67v1.21h-1.22v2.46z"/>
+        <path fill="#910200" d="M4.88 4.88V3.66h1.23v1.22h.01-1.24z"/>
+        <path fill="#c83e29" d="M6.11 4.88V3.66h1.22v1.22-.01l-1.22.01z"/>
+        <path fill="#100504" d="M23.21 4.89h-3.63l-.04 2.43.13-2.45 3.54.02zm1.24-1.23v1.21l-.02-1.21h.02z"/>
+        <path fill="#910200" d="M1.23 22h-.02V8.54h1.23V22H1.23z"/>
+        <path fill="#c83e29" d="M2.44 22l.01-14.67h1.21V6.11h1.22l-.01 2.43h.01-1.22v14.67H2.45L2.44 22z"/>
+        <path fill="#910200" d="M4.88 6.11H3.66V4.88h1.22v1.23z"/>
+        <path fill="#010000" d="M3.66 4.9v1.21L2.44 6.1V4.9h1.22z"/>
+        <path fill="#910200" d="M2.44 6.1l1.22.01v1.22H2.45L2.44 6.1z"/>
+        <path d="M2.44 22l-.01 2.43h-1.2V22h1.21z"/>
+        <path fill="#c83e29" d="M4.88 25.66H3.66l-.01-1.23h1.23v1.23z"/>
+        <path fill="#910200" d="M2.43 24.43l.02-1.22h1.21v1.22H2.43z"/>
+        <path fill="#d8705c" d="M42.79 26.88v-1.23h-1.22v-1.21l3.65.01v1.21h7.33v1.23l-9.76-.01z"/>
+        <path fill="#78fdfd" d="M29.34 24.45h1.2v1.21H33l-.07 1.22-4.82-.01v-1.21h1.23v-1.21zm8.54 1.22l3.66-.01v1.22l-3.66-.01v-1.2zm-1.24-.01l.02 1.21-2.42.01.02-1.22h2.38zm-12.19 1.22v-1.22h2.43v1.21l-2.43.01z"/>
+        <path fill="#f4f5f5" d="M26.88 26.87l.02-1.22 1.22.01h-.01v1.21h-1.23zm9.78 0l.03-1.21 1.19.01v1.2h-1.22z"/>
+        <path fill="#100504" d="M36.64 25.66h-2.38 2.38zm-2.41 0l.01 1.22-.01-1.22z"/>
+        <path fill="#d8705c" d="M53.74 25.65l-1.16-.01v-1.19h1.19l-.03 1.2z"/>
+        <path fill="#010000" d="M41.55 6.11h3.66V4.9l7.34-.02v1.23l-6.1.04v4.84h-1.23V7.34l-3.67-.02V6.11z"/>
+        <path d="M45.21 24.44l-3.64-.02v-1.2l3.64-.01.03-3.66 1.21-.01-.02 4.79 6.11.12.01 1.19h-7.31l-.03-1.2zm1.24-13.45h1.21v8.55h-1.21v-8.55z"/>
+        <path fill="#100504" d="M52.54 24.45l-6.09-.02 6.1-.01-.01.03zm-6.09-.02l-.01-2.41.01 2.41zm-1.23.02l.02 1.19h7.31v.02h-7.33v-1.21z"/>
+        <path fill="#c83e29" d="M46.45 10.99v8.55l-2.46.01v1.22h-2.44V22h-2.44v1.2h-6.12v-1.21h-3.66v-1.23h-1.22v-1.21l-2.45-.01v.01-8.56h2.45V8.54h3.67V7.35l9.77-.03v1.22H44v2.45h2.45z"/>
+        <path d="M26.88 10.99h-1.22V7.32h1.22v3.67zm.02-3.67V6.11h3.64l-.09 1.22-3.55-.01z"/>
+        <path fill="#f4f5f5" d="M29.34 6.09h-1.23l.01-1.22-.01.01h1.23v1.21z"/>
+        <path fill="#78fdfd" d="M28.12 4.87l-.01 1.22H26.9V4.88l1.22-.01z"/>
+        <path fill="#020101" d="M17.11 10.99v8.55h-1.22v-8.55h1.22zm8.55 0v8.56h-1.22v-8.56h1.22z"/>
+        <path d="M18.33 23.21h-1.22v-3.67h1.22v3.67zm0-15.88v3.66h-1.22V7.33h1.22zm7.33 12.21l1.22.11v3.56h-1.22v-3.67z"/>
+        <path fill="#f4f5f5" d="M23.21 22v1.2h-2.42V22h2.42zm0 0v-1.23h1.23V22h-1.23z"/>
+        <path fill="#c83e29" d="M17.11 7.33v3.66h-1.22v8.55h1.22v4.88H8.55v-1.21H7.33v-2.44H6.12v-1.23H4.88l.01-7.33h1.22V9.78h1.21V8.55h1.22V7.33h1.24V6.12h7.33v1.21z"/>
+        <path fill="#040101" d="M7.33 25.66H6.11l-.02-3.67.04 2.44h1.2v1.23z"/>
+        <path fill="#910200" d="M4.88 19.54h.02v2.42l1.19.04H4.87h.01v-2.46z"/>
+        <path fill="#d8705c" d="M26.89 19.55h1.22v1.21h1.22v1.23h3.66v1.21h6.12V22h2.44v-1.23h2.44v-1.22h1.23l-.01 3.66-3.64.01-.04 1.2H30.56v-1.21h-3.67v-3.66z"/>
+        <path fill="#f4f5f5" d="M29.34 24.45v1.21h-1.23.01l-.01-1.21h1.23z"/>
+        <path fill="#78fdfd" d="M28.11 24.45l.01 1.21-1.22-.01v-1.2h1.21z"/>
+        <path fill="#d8705c" d="M6.09 24.45l-.1 1.21-1.11-.01v-1.22l1.21.02z"/>
+        <path d="M4.88 19.54V22l-1.22-.01V8.54h1.22v11z"/>
+        <path fill="#010000" d="M4.87 8.54l.01-2.43h1.23v2.43H4.87zm1.24-3.66l1.22-.01v1.24H6.11l.01-1.23h-.01z"/>
+        <path fill="#c83e29" d="M6.12 4.88l-.01 1.23H4.88V4.88h1.24z"/>
+        <path fill="#d8705c" d="M3.66 21.99l1.22.01h-.01l.01 2.43H3.66v-2.44z"/>
+        <path fill="#910200" d="M45.22 10.99H44V8.54h-2.45V7.32l3.67.02v3.65z"/>
+        <path fill="#100504" d="M45.21 23.21l.01-3.66-.01 3.66z"/>
+        <path fill="#010000" d="M4.88 24.43L4.87 22h1.22v2.43H4.88z"/>
+        <path fill="#c83e29" d="M4.92 24.44l1.17-.01v.02l-1.17-.01z"/>
+      </symbol>
+      <symbol id="car-green" viewBox="0 0 55 30.55" width="55" height="30">
+        <path d="M0 4.88h1.21v1.24h1.22v1.21H1.24l.01 15.89 1.2.02v1.19l-1.23.03v1.18H0V4.88zm31.77 25.67h-1.2v-1.22h1.2v1.22z"/>
+        <path fill="#061206" d="M31.77 30.55v-1.22h.02v1.22h-.02zm-1.2-1.22v1.22h-.02v-1.22h.02z"/>
+        <path d="M29.34 2.42V1.23l1.23-.02-.02 2.45h-8.48L22 4.88l2.42.04v1.16l-10.96.01V4.92l7.31-.04.02-1.13-7.33-.09-.06 1.22h-1.16l-.03-1.22H2.48l-.03-1.21 26.89-.03z"/>
+        <path d="M31.79 1.21l1.21.02.01 1.19 17.09.05v1.19l-2.43.01v1.21h-1.21l-.02-1.21h-9.77v3.66l-1.21-.01V4.9l-3.68.02-.03 1.16h-3.62V4.9l2.42-.02.02-1.22h1.2V1.21h.02zm0 28.12h-.02l.02-2.37-1.22-.08-.02-1.22-2.42-.03v-1.17h3.64l.02 1.18h3.67v-2.42l1.21-.01.18 3.72 9.6-.15.03-1.11h1.19l.05 1.21 2.38.05v1.15l-17.09.04-.01 1.19-1.21.02zm22-20.79H55V22h-1.21V8.54z"/>
+        <path fill="#010301" d="M53.79 22v2.45h-1.22v1.22l-1.23-.01v-.02h1.21l.01-3.64h1.23z"/>
+        <path fill="#000100" d="M53.79 6.12v2.42h-1.23l-.01-2.43 1.24.01z"/>
+        <path fill="#0a5a00" d="M33.01 28.12l17.09-.04-.11-1.2h-1.1v-1.22l1.22-.01.02 2.45-17.12.02z"/>
+        <path fill="#010301" d="M2.45 2.45l.01 2.43-1.25.02V3.66h1.22l.02-1.21z"/>
+        <path d="M50.13 26.89l-.01-1.23 1.22.01v1.22h-1.21zm0-23.23h1.21v1.22h-1.22l.01-1.22zM30.57 0h1.2v1.21h-1.2V0z"/>
+        <path fill="#010101" d="M29.34 2.42l-26.89.03 26.89-.03z"/>
+        <path fill="#1b3b1d" d="M50.1 3.66V2.47l-17.09-.05 17.12.01v1.23h-.03z"/>
+        <path fill="#337827" d="M53.79 6.12l-1.24-.01v.01-1.24l.03 1.21 1.21.03z"/>
+        <path fill="#061206" d="M52.55 4.88v.02h-1.21v-.02h1.21zM30.57 0v1.21h-.02L30.57 0zm1.2 1.21V0l.02 1.21h-.02zm.04 28.12l1.19-.02-1.19.02zM33 1.23l-1.19-.01 1.19.01zm-2.47-.01l-1.19.01 1.19-.01z"/>
+        <path d="M30.57 29.33l-1.23-.02v-1.19l-26.88-.04.02-1.2 9.74-.02v-1.2h1.21l.03 1.22h7.3l-.02-1.22-7.29-.02v-1.21h11l-.04 1.2-2.41.04v1.21h8.55l.02 2.45z"/>
+        <path fill="#010301" d="M2.43 26.88H1.24v-1.22h1.21l-.01 1.22h-.01z"/>
+        <path fill="#061206" d="M2.43 26.88l.03 1.2 26.88.04-26.91-.01v-1.23zm-1.19-1.22v1.22l-.03-1.21.03-.01zm28.1 3.65l1.19.02-1.19-.02z"/>
+        <path fill="#337827" d="M2.45 24.43l-.02-1.21H1.25L1.24 7.33V17l1.21.1v3.67h1.22V22h4.88l-.01 2.43H2.45z"/>
+        <path fill="#7ec375" d="M1.24 11V7.33h1.19l.04-1.22 6.08.01v2.42H3.67v1.25H2.45V11H1.24z"/>
+        <path fill="#337827" d="M1.24 25.66h-.02v-1.2l1.23-.03v1.24-.01H1.24z"/>
+        <path fill="#061206" d="M8.55 6.12l-6.08-.01-.04 1.22V6.09l6.12.03z"/>
+        <path fill="#337827" d="M2.43 6.09v.03H1.21V4.9h.03v1.19h1.19z"/>
+        <path fill="#061206" d="M2.43 23.22l.02.02-.02-.02zm28.14 6.11v-.01h1.2v.01h-1.2z"/>
+        <path fill="#7ec375" d="M2.46 4.88l-.01-1.22h9.76l.03 1.22 1.2.04-.04 1.18-3.61-.01-.01-1.21H2.45h.01z"/>
+        <path fill="#78fdfd" d="M22 4.88l.07-1.22 4.82.01v1.21h-1.22v1.21h-1.22V4.88H22z"/>
+        <path fill="#061206" d="M22 4.88h2.45v1.21h3.66l.01-1.21h2.43l-2.42.02v1.18h3.62l.03-1.16v1.2h-3.66l.02 4.87h-.03V7.33h-3.67V6.11H13.45l.01-.02 10.96-.01V4.92L22 4.88z"/>
+        <path fill="#78fdfd" d="M13.46 3.66l3.66.01v1.2l-3.6.01-.06-1.22zm17.09 1.22h-2.43V3.67l2.43-.01v1.22zm-9.78 0l-2.43-.01v-1.2l2.42-.01.01 1.22z"/>
+        <path fill="#65b557" d="M31.77 3.66h-1.2V1.22l1.21.04-.01 2.4z"/>
+        <path fill="#f4f5f5" d="M28.12 3.67l-.01 1.21h-1.23.01V3.67h1.23zm-9.78 0v1.2h-1.22v-1.2h1.22z"/>
+        <path fill="#061206" d="M17.12 4.87l3.62.01-7.28.04-.01 1.18-.01-.01V4.92l-1.2-.04h1.16l.06-1.22.06 1.22 3.6-.01zm13.44-3.61l-.01 3.62.01-3.62zM12.24 4.88l-.03-1.22.03 1.22zm8.53 0l-.01-1.22.01 1.22zm11-3.66h-1.2 1.2z"/>
+        <path fill="#010101" d="M2.48 3.66h-.03l.01-.02.02.02z"/>
+        <path fill="#78fdfd" d="M28.12 7.33V6.12h3.66V4.9h3.65v2.41h1.21V11h1.21v8.55h-1.18V22h-4.89v-1.24h-2.44v-1.19h1.21V11h-1.21V7.33zm3.67 1.22h-1.23v1.22h1.23V8.54h2.42v-1.2h-2.42v1.21z"/>
+        <path fill="#7ec375" d="M36.67 7.31V3.67h9.77l.02 1.21 1.21.02v1.22h1.22l.02 2.43 1.17.01.02 2.44h-1.22V9.78h-1.21V7.33h-1.22v-1.2h-8.57v1.2l-1.21-.02z"/>
+        <path fill="#337827" d="M50.1 3.66h.03l-.02 1.23h-1.23l.01-1.22 1.21-.01z"/>
+        <path fill="#65b557" d="M48.89 3.67v1.21h-1.22V3.67h1.22z"/>
+        <path fill="#061206" d="M35.46 7.32l-.02-2.41-3.65-.01h3.67v2.42zm-3.69-3.66l.01-2.4-.01 2.4z"/>
+        <path fill="#337827" d="M47.67 4.9l-1.21-.02h1.21v.02z"/>
+        <path fill="#65b557" d="M36.67 7.31l.02.01-.02.01v-.02z"/>
+        <path fill="#337827" d="M50.1 11V8.56h.03V22h-1.22l-.01 2.43h-1.23v1.24h-1.19l-.21 1.21h-9.55l-.05-3.65 1.22-.02v1.21h7.34v-1.21h1.23v-1.22h1.22v-1.23h1.21v-2.43h1.21V11z"/>
+        <path fill="#53ebeb" d="M29.34 20.76h2.44V22h4.89v1.21l-1.21.01-.04 2.43-3.63-.01-.01-1.21h-3.65v-1.22l-.01.01 1.22-.01v-2.45z"/>
+        <path fill="#65b557" d="M31.77 29.32l-1.21-.04.01-2.4h1.2v2.44zm17.12-3.66v1.22l-1.22-.08v-1.13h1.22v-.01z"/>
+        <path fill="#000100" d="M36.72 26.88h9.67-9.67z"/>
+        <path fill="#061206" d="M28.13 23.21v1.22h3.65v1.19l-.01-1.16h-3.64v1.17l2.42.03-2.43.01-.01-1.22h-3.66l.01-.02h3.64v-1.21l.03-.01zm3.66 2.43l3.63.01.04-2.43v2.42h-3.67z"/>
+        <path fill="#000100" d="M47.72 26.88l2.38.05-2.38-.05z"/>
+        <path fill="#061206" d="M30.57 26.88l-.01 2.4-.01-3.62.02 1.22zm1.21 2.4l-.01-2.4.01 2.4z"/>
+        <path fill="#337827" d="M36.69 23.22l-.02.01v-.02l.02.01z"/>
+        <path fill="#0a5a00" d="M52.56 8.54l1.23.01V22h-1.23V8.54z"/>
+        <path fill="#337827" d="M52.56 8.54l-.01 14.67h-1.21V7.33h1.21l.01 1.21z"/>
+        <path fill="#0a5a00" d="M51.34 25.66l-1.23-.01.02-1.22h-.01 1.22v1.23zm0-2.45h1.21v1.22h-1.21v-1.22z"/>
+        <path d="M51.34 24.43h1.21v1.21h-1.21v-1.21z"/>
+        <path fill="#0a5a00" d="M52.55 7.33h-1.21l.01-1.22 1.2.01v-.01 1.22z"/>
+        <path fill="#65b557" d="M50.13 24.43l-.02 1.22-1.22.01v.01l.01-1.2 1.23-.04z"/>
+        <path fill="#7ec375" d="M2.43 6.09H1.24l.02-1.2 1.17.01v1.19z"/>
+        <path fill="#337827" d="M2.43 6.09V4.9l-1.17-.01 1.2-.01h-.01v1.21h-.02zm48.91-1.21l.01 1.23-1.23.01V4.88h1.22z"/>
+        <path d="M51.35 6.11l-.01-1.21h1.21v1.22l-1.2-.01z"/>
+        <path fill="#337827" d="M28.13 23.21l-3.67.01-.01 1.21h-11v-1.21l9.77-.03V22h3.67v-2.45h1.23v3.67l.01-.01z"/>
+        <path fill="#337827" d="M2.44 26.88l.01-1.22v.01l7.34-.03v-1.19l3.66-.02.01 1.24-1.24-.01v1.2l-9.78.02z"/>
+        <path fill="#78fdfd" d="M24.45 24.45h1.22v1.22h1.22l-.01-.01.01 1.22H22v-1.21h2.45v-1.22zm-7.33 2.43h-3.66v-1.21h3.66v1.21zm3.64 0h-2.42v-1.21h2.43l-.01 1.21zm9.79-1.21v1.21h-2.43v-1.21h2.43z"/>
+        <path fill="#f4f5f5" d="M28.12 25.67v1.21h-1.23l-.01-1.22 1.24.01zm-9.78 0v1.21h-1.22v-1.21h1.22z"/>
+        <path fill="#061206" d="M18.34 25.67h-4.88l-.01-.03 7.29.02-2.4.01zm6.11-1.2v1.2H22l2.41-.04.04-1.16zm-3.69 2.41l.01-1.21-.01 1.21zm-7.3-1.21v1.21l-.03-1.22.03.01z"/>
+        <path fill="#010101" d="M2.45 26.89l.03-.01-.02.02-.01-.01z"/>
+        <path fill="#65b557" d="M1.24 11h1.21V9.79h1.22V8.54h4.88V11H7.34v8.55h1.21V22H3.67v-1.23H2.45V17.1L1.24 17v-6z"/>
+        <path d="M8.55 22v-2.45h1.21l.05 3.66 3.64.01v1.21l-3.66.02v1.19l-7.34.03v-1.24l6.1-.05V22z"/>
+        <path fill="#061206" d="M8.55 10.95V6.12v4.83z"/>
+        <path d="M8.55 10.95l-.11-4.86H2.45V4.9h7.31l.03 1.19h3.65l-.01 1.24H9.79l-.03 3.66-1.21.01v-.05z"/>
+        <path fill="#061206" d="M9.78 6.07L9.76 4.9H2.45v-.02h7.33v1.19zm3.62.03l-3.61-.01 3.61.01z"/>
+        <path fill="#f4f5f5" d="M26.89 6.09h-1.22V4.88h1.22-.01l.01 1.21z"/>
+        <path fill="#65b557" d="M8.57 11h2.44V9.77h2.44V8.54h2.44v-1.2h6.12v1.21h3.66v1.23h1.22v1.21h2.45v8.56h-2.45V22h-3.67v1.19l-9.77.03v-1.23H11v-2.44H8.57V11z"/>
+        <path fill="#7ec375" d="M28.11 10.99h-1.22V9.78h-1.22V8.55h-3.66V7.34h-6.12v1.2h-2.44v1.23h-2.44V11H9.78l.01-3.67h3.64l.02-1.22h10.99v1.22h3.67v3.66z"/>
+        <path d="M29.34 10.99h-1.2l-.02-3.66h1.22V11v-.01z"/>
+        <path fill="#78fdfd" d="M26.89 6.09l-.01-1.21h1.23v1.21h-1.22z"/>
+        <path fill="#010101" d="M29.34 19.55v-8.56.01h1.21v8.54l-1.21.01z"/>
+        <path fill="#010301" d="M36.67 7.33h1.21l.03 12.22-.03-8.55h-1.21V7.33z"/>
+        <path d="M36.69 23.22l-.02-.01v-3.66h1.22l.01 3.64-1.21.03zm-8.55-3.67h1.2v3.66l-1.22.01.02-3.67z"/>
+        <path fill="#f4f5f5" d="M31.79 8.55V7.34h2.42v1.2h-2.42v.01zm0-.01v1.23h-1.23V8.55h1.23v-.01z"/>
+        <path fill="#061206" d="M30.55 11h-1.21v-.02l1.21.02zm-1.21 8.57v-.02l1.21-.01-1.21.03z"/>
+        <path fill="#65b557" d="M37.89 23.21l.02-3.66h1.21V11h-1.21l-.03-4.87h8.57v1.2h1.22v2.45h1.21V11h1.22v7.33h-1.21v2.43h-1.21v1.23h-1.22v1.22h-1.23v1.21h-7.34v-1.21z"/>
+        <path fill="#010101" d="M50.13 8.56l-1.22-.01-.02-2.43h-1.22V4.88h1.22l.02 1.22 1.21.02.01 2.44z"/>
+        <path fill="#337827" d="M48.91 8.55l1.17.01-1.17-.01z"/>
+        <path fill="#65b557" d="M48.91 6.1V4.88l1.2.01.01 1.21h-1.21z"/>
+        <path fill="#1b3b1d" d="M48.91 4.88l-.01 1.19.01-1.19z"/>
+        <path d="M50.13 8.56l-.01-.01h1.22v13.43l-1.22.02h.01V8.56zm-.03 15.87h-1.2l-.01-2.41L50.1 22v2.43z"/>
+        <path fill="#000100" d="M48.9 24.43h.01l-.02 1.24h-1.22v-1.24h1.23z"/>
+        <path fill="#061206" d="M50.1 24.43V22h.03-.01v2.43h.01-.03zM48.91 22l-.02.02.02-.02z"/>
+        <path d="M24.46 24.43v-1.21h3.64v1.21h-3.64z"/>
+        <path fill="#78fdfd" d="M28.11 25.66h-1.23l.01.01v-1.22h1.22v1.21z"/>
+        <path fill="#f4f5f5" d="M26.89 24.45v1.22h-1.22v-1.22h1.22z"/>
+        <path fill="#65b557" d="M51.34 8.55h-1.22V6.12h1.22v2.43zm-1.22 15.88V22h1.22v2.43h-1.22z"/>
+        <path fill="#061206" d="M51.34 22l-.02-.01.02-.01V22z"/>
+        <path fill="#0a5a00" d="M48.91 24.45v-.02l1.18.01-1.18.01zm-.01 1.18v-1.16 1.16z"/>
+        <path fill="#1b3b1d" d="M48.91 6.1h1.21-1.21z"/>
+        <path fill="#061206" d="M28.14 19.55l-.02.02v-.02h.02z"/>
+        <path d="M8.55 19.55H7.34V11h1.21v8.55z"/>
+        <path fill="#061206" d="M8.55 19.59v2.36-2.36z"/>
+        <path fill="#337827" d="M9.78 19.55H11v2.44h2.45v1.23l-3.64-.01-.03-3.66z"/>
+        <path fill="#061206" d="M8.55 19.55V11h.02v8.55h-.02zm1.23 0v.02l-.02-.02h.02zm.01-12.22L9.78 11l-.02-.01.03-3.66zm3.66-1.19l-.02 1.19.02-1.19z"/>
+        <path fill="#000100" d="M37.91 11h1.21v8.55h-1.21V11z"/>
+        <path fill="#337827" d="M37.91 19.55l-.01 3.64-.01-3.64h.02z"/>
+      </symbol>
+      <symbol id="road" viewBox="0 0 398 79" width="362" height="72">
+        <g fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2">
+          <path d="M0 78h398M1 1h395M0 40h6" />
+          <path stroke-dasharray="12.39 20.65" d="M26.65 40h353.03" />
+          <path d="M390 40h6" />
+        </g>
+      </symbol>
+      <symbol id="arguments" viewBox="0 0 574 475">
+        <g>
+   <path fill="#fff" d="M0 0h574v475H0z"/>
+   <g>
+     <path fill="none" d="M89.76 261.36v12.38H96v-12.38h-6.24zm30.99 6.19h6.18v6.19h-6.18z"/>
+     <path fill="#381800" d="M133.12 205.57v37.22h6.19v-37.22h-6.19z"/>
+     <path fill="#aa7536" d="M126.93 255.17v30.94h6.19v-37.13h-6.19v6.19z"/>
+     <path fill="#542700" d="M133.12 230.42v-24.85h-6.19v-6.19h-6.18v-6.19h-6.19v-6.18H83.57v6.18h-6.19v6.19h-6.19v49.6h6.19v-43.41h6.19v-6.19h18.61v6.19h12.38v6.28h6.19v6.19h6.18v6.19h-6.18v12.37h-6.19v6.19h6.19v12.38h6.18v-6.19h6.19v-18.56z"/>
+     <path fill="#381800" d="M126.93 199.38h6.19v6.19h-6.19z"/>
+     <path d="M126.93 273.74h-6.18v18.55h6.18v-18.55z"/>
+     <path fill="#891313" d="M120.75 267.55h6.18v-12.38h-6.18v12.38z"/>
+     <path fill="#925f2d" d="M120.75 218.04h6.18v6.19h-6.18z"/>
+     <path fill="#381800" d="M120.75 193.19h6.18v6.19h-6.18z"/>
+     <path fill="#aa7536" d="M114.56 304.67v12.47h6.19v-18.66h-6.19v6.19z"/>
+     <path fill="#1d1d1b" d="M120.75 279.93v-12.38H96v6.19h-6.24v18.55H96v6.19h6.18v-18.55h6.2v18.55h12.37v-18.55z"/>
+     <path fill="#925f2d" d="M114.56 230.42h6.2v6.19h-6.2z"/>
+     <path fill="#381800" d="M114.56 187.01h6.2v6.18h-6.2z"/>
+     <path fill="#891313" d="M108.38 317.14v6.19h12.37v-6.19h-12.37z"/>
+     <path fill="#925f2d" d="M108.38 236.6h6.18v6.19h-6.18z"/>
+     <path fill="#9c1915" d="M102.18 242.79H89.76v18.57H96v6.19h24.75v-24.76h-18.57z"/>
+     <path fill="#925f2d" d="M102.18 224.23H96v6.19h12.38v-6.19h-6.2z"/>
+     <path fill="#381800" d="M102.18 211.85h6.2v6.19h-6.2z"/>
+     <path fill="#aa7536" d="M96 304.67v12.47h6.18v-18.66H96v6.19z"/>
+     <path fill="#891313" d="M89.76 317.14v6.19h12.42v-6.19H89.76z"/>
+     <path fill="#381800" d="M89.76 211.85H96v6.19h-6.24z"/>
+     <path fill="#381800" d="M89.76 248.98v-6.19h12.42v-6.19H89.76v-6.18h-6.19v-24.85h-6.19v49.6h6.19v-6.19h6.19z"/>
+     <path fill="#aa7536" d="M83.57 218v12.38h6.19v6.18h12.42v6.19h6.2v-6.15h6.18v-6.18h6.19v-18.57h-6.19v-6.28h-12.38v-6.19H89.76v6.19h-6.19V218zm18.61 12.38H96v-6.19h12.38v6.19zm6.2-18.57V218h-6.2v-6.19zm-12.38 0V218h-6.24v-6.19z"/>
+     <path fill="#381800" d="M83.57 199.38h6.19v6.19h-6.19z"/>
+     <g>
+       <path fill="#c69c6d" d="M68.69 107.1h5v158h-5z"/>
+       <path fill="#fff" stroke="#c69c6d" stroke-miterlimit="10" stroke-width=".25" d="M5.69 112.1h131v71h-131z"/>
+       <text transform="translate(19.19 143.9)">
+         no pseudo<tspan x="5" y="19.2">services!</tspan>
+       </text>
+     </g>
+     <g fill="#aa7536">
+       <path d="M89.76 255.17v-6.19h-6.19v18.57h6.19v-12.38zm-12.38 6.19v12.38h6.19v-12.38h-6.19zm0 0v-12.38h-6.19v6.19H65v12.38h6.19v6.19h6.19v-12.38z"/>
+     </g>
+   </g>
+   <g>
+     <g>
+       <path fill="#c69c6d" d="M202.87 4.24h5v158h-5z"/>
+       <path fill="#fff" stroke="#c69c6d" stroke-miterlimit="10" stroke-width=".25" d="M139.87 9.24h131v71h-131z"/>
+       <text transform="translate(171.37 30.04)">
+         digital<tspan x="-21" y="19.2">rights and</tspan><tspan x="-15" y="38.4">freedoms!</tspan>
+       </text>
+     </g>
+     <g>
+       <path fill="none" d="M212.92 157.23v12.38h6.18v-6.19h6.25v-6.19h-6.25v-6.19h-6.18v6.19z"/>
+       <path fill="#5b371d" d="M262.47 113.82v18.66h6.19v-18.66h-6.19z"/>
+       <path fill="#efcbb1" d="M256.28 138.67v12.37h6.19v-6.19h6.19v-6.18h-6.19v-6.19h-6.19v6.19z"/>
+       <path fill="#805126" d="M262.47 120.01v-6.19H250.1v-6.18h-24.75v-6.19h-6.25v-6.19h-6.18v6.19h-6.19v12.37h6.19v6.19h37.18v6.18h6.18v6.29h6.19v-12.47z"/>
+       <path fill="#f4d9bf" d="M250.1 175.8v37.12h6.18v-6.19h6.19v-43.31H250.1v12.38z"/>
+       <path fill="#efcbb1" d="M250.1 151.04h6.18v6.19h-6.18z"/>
+       <path fill="#f4d9bf" d="M256.28 138.67V126.2h-6.18V120h-37.18v24.84h12.43V151h-6.24v6.19h6.24v6.19h12.37v-6.19h12.38V151h6.18v-12.33zm-24.76-6.19h6.2v6.19h-6.2zm-12.41 6.19v-6.19h6.24v6.19z"/>
+       <path fill="#5b371d" d="M250.1 107.64h6.18v6.18h-6.18z"/>
+       <path fill="#59404b" d="M243.9 237.77h-6.18v6.19h18.56v-6.19H243.9z"/>
+       <path fill="#805126" d="M250.1 206.73h-31v31.04h12.42v-24.85h12.38v24.85h12.38v-24.85h-6.18v-6.19z"/>
+       <path fill="#7a7964" d="M243.9 163.42h6.2v6.19h-6.2z"/>
+       <path fill="#efcbb1" d="M237.72 157.23v6.19h-12.37v6.19h18.55v-6.19h6.2v-6.19h-12.38z"/>
+       <path fill="#193540" d="M231.52 132.48h6.2v6.19h-6.2z"/>
+       <path fill="#838272" d="M231.52 206.73h18.58v-37.12h-24.75v-6.19h-6.25v43.31h12.42z"/>
+       <path fill="#59404b" d="M219.1 237.77h-6.18v6.19h18.6v-6.19H219.1z"/>
+       <path fill="#efcbb1" d="M219.11 144.85h6.24v6.19h-6.24z"/>
+       <path fill="#193540" d="M219.11 132.48h6.24v6.19h-6.24z"/>
+       <path fill="#5b371d" d="M225.35 101.45v6.19h12.37v-6.19h-6.2v-6.19H219.1v6.19h6.25z"/>
+       <path fill="#f4d9bf" d="M219.1 169.61h-6.18v-18.57h-12.38v24.76h6.19v6.19h12.37v-12.38z"/>
+       <path fill="#f9ab4e" d="M212.92 144.85h6.19v6.19h-6.19z"/>
+       <path fill="#fff" d="M212.92 151.04v-6.19h-12.38v6.19h12.38z"/>
+       <path fill="#838272" d="M194.35 144.85h6.19v6.19h-6.19z"/>
+     </g>
+   </g>
+   <g>
+     <path fill="none" d="M437.38734164 126.80671602l6.1899457-.02592853.02630552 6.2799449-6.1899457.02592854zM505.74 182.33l-6.19.02.02 6.19-6.18.03.03 6.19 6.18-.03 6.19-.02-.03-6.19-.02-6.19z"/>
+     <path fill="#59361c" d="M518.01 145.15l-.02-6.19-.03-6.19-.03-6.28-6.24.02.03 6.28.03 6.19.02 6.19.03 6.19 6.24-.03.02 6.19 6.19-.02-.02-6.19-.03-6.19-6.19.03zm-6.84 14.53h6.24v6.19h-6.24z"/>
+     <path fill="#805126" d="M511.8 151.36l-.03-6.19-.02-6.19-.03-6.19-.03-6.28-6.18.03-.03-6.19-.03-6.19-6.19.03-6.17.02-.03-6.18-6.2.03-6.18.02-6.2.03-6.17.03-6.25.02-6.18.03.02 6.18-6.19.02.03 6.19-6.19.03.02 6.18.03 6.29.03 6.18.02 6.19 6.19-.02-.02-6.19-.03-6.19 6.19-.02-.03-6.29-.02-6.19 6.19-.02 6.24-.03.02 6.19 6.18-.02 6.2-.03 6.18-.03.02 6.29 6.2-.03.03 6.19 6.18-.03 6.19-.02.02 6.19-6.19.02.03 6.19-6.18.03.03 6.19-6.2.02.02 6.19.03 6.19 6.2-.03-.03-6.19 6.18-.02 6.19-.03 6.19-.02-.03-6.19 6.24-.03-.02-6.19-6.24.03z"/>
+     <path fill="#59361c" d="M505.51 126.54l6.18-.03-.02-6.19-.03-6.18-6.19.02.03 6.19.03 6.19z"/>
+     <path fill="#f4d9bf" d="M499.52 176.17l.03 6.18 6.19-.02.02 6.19.03 6.19 6.19-.03-.03-6.19-.02-6.19-.03-6.18-6.19.02-.02-6.19-6.19.03.02 6.19z"/>
+     <path fill="#59361c" d="M499.47 163.79l-6.18.02.03 6.19 6.18-.02 6.19-.03 6.18-.02-.02-6.19-6.19.02-6.19.03z"/>
+     <path fill="#efcbb1" d="M499.36794287 139.01698845l6.1899457-.02592854.02592853 6.1899457-6.1899457.02592853z"/>
+     <path fill="#8e1a0a" d="M493.42 194.76l.03 6.19.02 6.18.03 6.18 6.18-.02-.03-6.19-.02-6.18-.03-6.19-6.18.03zm-.05-12.38l.02 6.19 6.18-.03-.02-6.19-.03-6.18-.02-6.19-6.18.02.02 6.19.03 6.19z"/>
+     <path fill="#59361c" d="M493.0581461 108.0136916l6.17994579-.02588665.02588665 6.17994578-6.17994579.02588665z"/>
+     <path fill="#f4d9bf" d="M487.32 219.53l.03 6.19.03 6.28.02 6.19 6.2-.03-.03-6.19-.02-6.28-.03-6.19-.02-6.19-6.2.03.02 6.19z"/>
+     <path fill="#a0220a" d="M493.45 200.95l-.03-6.19-6.2.03-6.18.02-6.2.03-6.17.02-6.25.03.03 6.18.03 6.18.02 6.19 6.24-.02 6.18-.03 6.2-.02 6.18-.03 6.2-.03-.03-6.18-.02-6.18z"/>
+     <path fill="#59361c" d="M487.12790245 170.01802901l6.1999456-.02597042.02592854 6.1899457-6.1999456.02597042z"/>
+     <path fill="#59404b" d="M481.22 238.21l.03 6.2 6.18-.03 6.2-.03-.03-6.19-6.2.03-6.18.02z"/>
+     <path fill="#efcbb1" d="M480.91 163.87l-6.19.02-6.18.03.02 6.19 6.18-.03.03 6.19 6.2-.03-.03-6.18 6.18-.03-.03-6.19-.02-6.19-6.18.03.02 6.19z"/>
+     <path fill="#732706" d="M481.04 194.81l6.18-.02 6.2-.03-.03-6.19-6.2.03-6.17.02-6.2.03-6.18.02.03 6.19 6.17-.02 6.2-.03z"/>
+     <path fill="#a0220a" d="M481.02 188.62l6.17-.02 6.2-.03-.02-6.19-.03-6.19-6.2.03-.02-6.19-6.18.03.03 6.18-6.2.03-.03-6.19-6.18.03-.02-6.19-6.24.02.02 6.19.03 6.19.02 6.19.03 6.19 6.24-.03 6.18-.02 6.2-.03z"/>
+     <path fill="#193540" d="M474.59269249 132.9308397l6.1999456-.02597042.02592854 6.1899457-6.1999456.02597042z"/>
+     <path fill="#f4d9bf" d="M468.77 219.61l.02 6.19.03 6.28.03 6.19 6.17-.03-.02-6.19-.03-6.28-.02-6.19-.03-6.19-6.18.03.03 6.19z"/>
+     <path fill="#59361c" d="M474.69 157.7l-6.18.03-6.24.02-.02-6.18-6.19.02.02 6.19.03 6.19.02 6.19 6.19-.03-.02-6.19 6.24-.02 6.18-.03-.03-6.19z"/>
+     <path fill="#59404b" d="M462.61 238.29l.02 6.19 6.24-.02 6.18-.03-.03-6.19-6.17.03-6.24.02z"/>
+     <path fill="#efcbb1" d="M462.22482563 145.35254593l6.23994526-.02613798.02592854 6.1899457-6.23994526.02613797z"/>
+     <path fill="#193540" d="M462.17301089 132.98286389l6.23994526-.02613798.02592853 6.1899457-6.23994525.02613797z"/>
+     <path fill="#f4d9bf" d="M462.32 170.13l-6.19.03-.02-6.19-.03-6.19-.02-6.19-6.19.03.02 6.19.03 6.19.02 6.18.03 6.19 6.19-.02.02 6.18 6.19-.02-.02-6.19-.03-6.19z"/>
+     <path fill="#f9ab4e" d="M456.0350056 145.3884742l6.1899457-.02592854.02592853 6.1899457-6.1899457.02592853z"/>
+     <path fill="#f4d9bf" d="M456 145.4h12.43v6.19h-6.25v6.18h12.42v6.19h6.19v-6.19h12.38v-6.19h6.18V139.2h-6.18v-6.19h-6.2v-6.29h-18.56v-6.19h-6.24V133h6.24v6.19h-6.24V133H456v6.18zm18.59-12.4h6.2v6.19h-6.2z"/>
+     <path fill="#59361c" d="M462.14 126.72l-.02-6.19-6.19.02.02 6.19.03 6.29 6.19-.03-.03-6.28z"/>
+     <path fill="#fff" d="M456.06 151.59l-.03-6.19-6.19.03-6.19.02.03 6.19 6.19-.02 6.19-.03z"/>
+     <path fill="#59361c" d="M456 139.21l-.02-6.18-6.19.02.03 6.19.02 6.19 6.19-.03-.03-6.19z"/>
+     <path fill="#805126" d="M449.89 157.81l-.02-6.19-6.19.02.02 6.19-6.19.03.03 6.19 6.19-.03.02 6.19 6.19-.03-.02-6.18-.03-6.19z"/>
+     <path fill="#838272" d="M437.47550353 145.46621722l6.1899457-.02592854.02592853 6.1899457-6.1899457.02592853z"/>
+     <path fill="#d3d2d8" d="M443.63 139.26l-.03-6.18-6.19.02-.02-6.28-6.19.03.02 6.28.03 6.19 6.19-.03.02 6.19 6.19-.03-.02-6.19z"/>
+     <path fill="#d3d2d8" d="M443.55 120.61l6.19-.03-.03-6.19-.02-6.18-6.19.03.02 6.18-6.19.02.03 6.19.03 6.19 6.18-.03-.02-6.18zm-6.27-18.53l-6.19.02.03 6.19.02 6.18 6.19-.03-.02-6.18-.03-6.18zm-12.40193997-6.16061137l6.1899457-.02592853.02592854 6.1899457-6.1899457.02592853z"/>
+     <g>
+       <path fill="#c69c6d" d="M499.81061943 41.77465806l4.99995614-.0209439.66182691 157.99861388-4.99995613.02094389z"/>
+       <path fill="#fff" stroke="#c69c6d" stroke-miterlimit="10" stroke-width=".25" d="M436.83211742 47.03917741l130.99885074-.54872991.29740324 70.99937712-130.99885074.5487299z"/>
+       <text transform="translate(452.46 77.79)">
+         Don’t kill<tspan x="-10" y="19.2">innovation!</tspan>
+       </text>
+     </g>
+     <path fill="#f4d9bf" d="M499.60125578 194.71553637l6.1899457-.02592853.02592853 6.1899457-6.1899457.02592853z"/>
+   </g>
+   <g>
+     <path fill="#381800" d="M382.41 232.09v-6.19h-6.19v-6.18h-6.18v12.37h6.18v12.47h6.19v6.19h6.19v-18.66h-6.19z"/>
+     <path fill="#925f2d" d="M382.41 244.56h-6.19v18.57h6.19v-6.19h6.19v-6.19h-6.19v-6.19z"/>
+     <path fill="#aa7536" d="M370.04 312.64v6.18h12.37v-6.18h-12.37z"/>
+     <path fill="#003c56" d="M370.04 287.88v24.76h12.37V275.5h-12.37v12.38z"/>
+     <path fill="#925f2d" d="M370.04 263.13h6.18v6.19h-6.18z"/>
+     <path fill="#aa7536" d="M376.22 250.75v-12.47h-12.37v-6.19h-24.8v6.19h-6.19v24.85h6.19v6.18h6.24v6.19h12.38v-6.19H370v-6.18h6.18v-12.38zm-24.75-6.19h6.2v6.19h-6.2zm-12.42 0h6.24v6.19h-6.24zm18.62 18.57h-12.38v-6.19h18.56v6.19z"/>
+     <path fill="#381800" d="M363.85 349.85h-6.18v6.19h18.55v-6.19h-12.37z"/>
+     <path fill="#00517b" d="M363.85 318.82h-24.8v31.03h12.42V325h12.38v24.85h12.37v-31.03h-12.37z"/>
+     <path fill="#381800" d="M363.85 213.53h6.2v6.19h-6.2z"/>
+     <path fill="#e2dfcf" d="M357.67 275.5v12.38h6.18v-6.19h6.19v-6.19h-12.37z"/>
+     <path fill="#925f2d" d="M357.67 269.31v6.19h12.37v-6.19h-12.37zm0-12.37h-12.38v6.19h18.56v-6.19h-6.18z"/>
+     <path fill="#381800" d="M351.47 244.56h6.2v6.19h-6.2z"/>
+     <path fill="#004868" d="M351.47 318.82h18.57v-37.13h-6.19v6.19h-6.18v18.57h-6.2v-18.57h-6.18v-6.19h-6.24v37.13h12.42z"/>
+     <path fill="#e2dfcf" d="M345.29 281.69h6.18v6.19h-6.18z"/>
+     <path fill="#a0220a" d="M351.47 281.69v24.76h6.2V275.5h-12.38v6.19h6.18z"/>
+     <path fill="#381800" d="M339.05 349.85h-6.19v6.19h18.61v-6.19h-12.42z"/>
+     <path fill="#e2dfcf" d="M339.05 275.5h6.24v6.19h-6.24z"/>
+     <path fill="#381800" d="M339.05 244.56h6.24v6.19h-6.24zm0-18.66h6.24v6.19h-6.24zm-6.19 6.19h6.19v6.19h-6.19zm0 12.47v-6.28h-6.19v18.66h6.19v-12.38z"/>
+     <path fill="#542700" d="M332.86 232.09h6.19v-6.19h6.24v6.19h18.56v6.19h12.37v-6.19h-6.18v-12.37h-6.19v-6.19h-24.8v6.19h-6.19v6.18h-6.19v12.38h6.19v-6.19z"/>
+     <g>
+       <path fill="#c69c6d" d="M317.36 129.81h5v158h-5z"/>
+       <path fill="#fff" stroke="#c69c6d" stroke-miterlimit="10" stroke-width=".25" d="M254.36 134.81h131v71h-131z"/>
+       <text transform="translate(259.86 155.61)">
+         End-to-end!<tspan x="0" y="19.2">End-to-end!</tspan><tspan x="0" y="38.4">End-to-end!</tspan>
+       </text>
+     </g>
+     <g>
+       <path fill="#003c56" d="M339.05 281.69v-6.19h-6.19v18.56h6.19v-12.37zm-12.38 6.19v12.37h6.19v-12.37h-6.19z"/>
+       <path fill="#aa7536" d="M326.67 287.88V275.5h-6.19v6.19h-6.19v12.37h6.19v6.19h6.19v-12.37z"/>
+     </g>
+     <path fill="#003c56" d="M373.86 274.25v-12.37"/>
+   </g>
+   <g>
+     <g>
+       <path fill="#c69c6d" d="M200.14 216.02h5v158h-5z"/>
+       <path fill="#fff" stroke="#c69c6d" stroke-miterlimit="10" stroke-width=".25" d="M137.14 221.02h131v71h-131z"/>
+       <text transform="translate(161.64 241.82)">
+         we want<tspan x="-19" y="19.2">control of</tspan><tspan x="-7" y="38.4">our data!</tspan>
+       </text>
+     </g>
+     <g>
+       <path fill="#efcbb1" d="M265.5 333.44v-6.18h-6.19v18.56h6.19v-6.19h6.19v-6.19h-6.19z"/>
+       <path fill="#5b371d" d="M259.31 320.98v6.28h6.19V308.6h-6.19v12.38z"/>
+       <path fill="#bcb19a" d="M253.14 401.51h6.18v6.19h-6.18z"/>
+       <path fill="#f4d9bf" d="M253.13 376.77v24.74h12.37v-24.74h-12.37z"/>
+       <path fill="#efcbb1" d="M253.14 345.82h6.18v6.19h-6.18z"/>
+       <path fill="#f4d9bf" d="M259.31 333.45V321h-6.17v-6.18H216v31h6.19V352h6.24v6.19h12.38V352h12.38v-6.19h6.17v-12.36zm-18.55 0h-6.2v-6.19h6.2zm-18.62-6.19h6.24v6.19h-6.24zm24.8 12.37v6.19h-18.56v-6.19h18.56v-6.18h6.2v6.18z"/>
+       <path fill="#5b371d" d="M253.14 302.42h6.18v6.18h-6.18z"/>
+       <path fill="#59404b" d="M246.94 432.55h-6.18v6.19h18.55v-6.19h-12.37z"/>
+       <path fill="#e2dfcf" d="M253.13 401.51h-30.99v31.04h12.42V407.7h12.38v24.85h12.37V407.7h-6.18v-6.19z"/>
+       <path fill="#bc847e" d="M246.94 364.39h6.19v12.38h12.37V358.2h-18.56v6.19z"/>
+       <path fill="#fff" d="M246.94 333.45h6.2v6.19h-6.2z"/>
+       <path fill="#efcbb1" d="M240.76 352.01v6.19h-12.38v6.19h18.56v-6.19h6.19v-6.19h-12.37z"/>
+       <path fill="#fff" d="M234.56 339.63h-6.18v6.19h18.56v-6.19h-12.38z"/>
+       <path fill="#193540" d="M234.56 327.26h6.2v6.19h-6.2z"/>
+       <path fill="#d2948b" d="M234.56 401.51h18.57v-37.12h-24.75v-6.19h-6.24v43.31h12.42z"/>
+       <path fill="#59404b" d="M222.14 432.55h-6.19v6.19h18.61v-6.19h-12.42z"/>
+       <path fill="#193540" d="M222.14 327.26h6.24v6.19h-6.24z"/>
+       <path fill="#805126" d="M228.38 314.79h24.75v6.19h6.18V308.6h-6.18v-6.18h-24.75v-6.19h-6.24v6.19h-6.19v6.18h-6.19v6.19h18.62z"/>
+       <path fill="#bc847e" d="M222.14 364.39v-6.19h-6.19v18.57h6.19v-12.38z"/>
+       <path fill="#f4d9bf" d="M209.76 370.58v12.38h6.19v-12.38h-6.19z"/>
+       <path fill="#e3bb94" d="M209.76 370.58V358.2h-6.19v6.19h-6.19v12.38h6.19v6.19h6.19v-12.38z"/>
+     </g>
+   </g>
+   <g>
+     <g>
+       <path fill="none" d="M502.75 413.62h6.18v6.19h-6.18zm-49.56-12.38h6.19v-12.37h-6.19v12.37z"/>
+       <path fill="#8063ce" d="M515.12 376.49h6.19v6.19h-6.19z"/>
+       <path fill="#7c3396" d="M515.12 370.3h6.19v6.19h-6.19z"/>
+       <path fill="#932c85" d="M515.12 364.11h6.19v6.19h-6.19z"/>
+       <path fill="#b64558" d="M515.12 351.64v12.47h6.19v-12.47h-6.19z"/>
+       <path fill="#f4d9bf" d="M508.93 407.43v24.75h6.19v-30.94h-6.19v6.19z"/>
+       <path fill="#8063ce" d="M508.93 388.87v6.19h6.19v-12.38h-6.19v6.19z"/>
+       <path fill="#a782e0" d="M508.93 376.49h-6.18v6.19h-6.2v18.56h6.2v-6.18h6.18v-12.38h6.19v-6.19h-6.19z"/>
+       <path fill="#b24b9e" d="M508.93 364.11h6.19v6.19h-6.19z"/>
+       <path fill="#b64558" d="M508.93 345.45h6.19v6.19h-6.19z"/>
+       <path fill="#c19a4d" d="M508.93 419.81h-6.18v18.56h6.18v-18.56z"/>
+       <path d="M502.75 395.06v18.56h6.18v-12.38h6.19v-6.18h-12.37z"/>
+       <path fill="#9b4bb5" d="M502.75 370.3v6.19h12.37v-6.19h-12.37z"/>
+       <path fill="#efcbb1" d="M502.75 364.11h6.18v6.19h-6.18z"/>
+       <path fill="#b64558" d="M502.75 339.26h6.18v6.19h-6.18z"/>
+       <path fill="#1d1e1d" d="M496.55 463.21h6.2v6.19h-6.2z"/>
+       <path fill="#efcbb1" d="M496.55 457.03h6.2v6.19h-6.2z"/>
+       <path fill="#e2b759" d="M502.75 426v-6.19h-6.2v-6.19h-18.56v6.19h-6.24v30.93h6.24v6.28h6.18V426h6.2v24.74h6.18v6.28h6.2V426z"/>
+       <path fill="#c19a4d" d="M496.55 413.62h6.2v6.19h-6.2z"/>
+       <path fill="#efcbb1" d="M496.55 376.49h6.2v6.19h-6.2z"/>
+       <path fill="#f4d9bf" d="M502.75 364.11v-6.19h-6.2v-6.28h-12.38v-6.19h-12.42v6.19h-6.19v24.85h6.19v6.19h12.42v6.19h6.2v-6.19h6.18v-6.19h6.2v-12.38zm-12.38-6.19v6.19h-6.2v-6.19zm-18.62 0H478v6.19h-6.24zm12.42 18.57v-6.19h6.2v6.19z"/>
+       <path fill="#b64558" d="M496.55 333.08h6.2v6.18h-6.2z"/>
+       <path fill="#ddd" d="M490.37 463.21h6.18v6.19h-6.18z"/>
+       <path fill="#efcbb1" d="M490.37 382.68h6.18v6.19h-6.18z"/>
+       <path fill="#1d1d1b" d="M490.37 413.62h12.38v-12.38h-6.2v-12.37h-18.56v6.19h-6.24v18.56h18.62z"/>
+       <path fill="#fff" d="M484.17 370.3h6.2v6.19h-6.2z"/>
+       <path fill="#193540" d="M484.17 357.92h6.2v6.19h-6.2z"/>
+       <path fill="#1d1e1d" d="M477.99 463.21h6.18v6.19h-6.18z"/>
+       <path fill="#efcbb1" d="M477.99 457.03h6.18v6.19h-6.18z"/>
+       <path fill="#8063ce" d="M477.99 382.68h-6.24v-6.19h-12.37v12.38h6.18v6.19h12.43v-6.19h6.18v-6.19h-6.18z"/>
+       <path fill="#ddd" d="M471.75 463.21h6.24v6.19h-6.24z"/>
+       <path fill="#193540" d="M471.75 357.92h6.24v6.19h-6.24z"/>
+       <path fill="#a782e0" d="M465.56 395.06h6.19v6.19h-6.19z"/>
+       <path fill="#b64558" d="M465.56 345.45h6.19v6.19h-6.19z"/>
+       <path fill="#f4d9bf" d="M459.38 395.06v6.18h-6.19v12.38h6.19v-6.19h6.18v-12.37h-6.18z"/>
+       <path fill="#a782e0" d="M459.37 388.87h6.19v6.19h-6.19z"/>
+       <path fill="#7c3396" d="M459.37 370.3h6.19v6.19h-6.19z"/>
+       <path fill="#932c85" d="M459.37 364.11h6.19v6.19h-6.19z"/>
+       <path fill="#b64558" d="M465.56 357.92v-6.28h-6.18v12.47h6.18v-6.19z"/>
+       <path fill="#a782e0" d="M459.38 382.68v-6.19h-6.19v12.38h6.19v-6.19z"/>
+       <path fill="#9b4bb5" d="M453.19 370.3h6.19v6.19h-6.19z"/>
+       <path fill="#b24b9e" d="M453.19 364.11h6.19v6.19h-6.19z"/>
+       <path fill="#e19ba3" d="M459.38 357.92v-6.28h6.18v-6.19h18.61v6.19h12.38v6.28h6.2v6.19h12.37v-12.47h-6.19v-6.19h-6.18v-6.19h-6.2v-6.18h-30.99v6.18h-6.18v6.19h-6.19v18.66h6.19v-6.19z"/>
+       <path fill="#efcbb1" d="M453.19 395.06v-6.19H447v6.19h-6.19v12.37h12.38v-12.37z"/>
+     </g>
+     <g>
+       <path fill="#c69c6d" d="M442.52 247.24h5v158h-5z"/>
+       <path fill="#fff" stroke="#c69c6d" stroke-miterlimit="10" stroke-width=".25" d="M379.52 252.24h131v71h-131z"/>
+       <text transform="translate(403.02 282.04)">
+         Keep the<tspan x="-5" y="19.2">web fast!</tspan>
+       </text>
+     </g>
+   </g>
+ </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="scripts/main.js" charset="utf-8"></script>
 </body>
 
 </html>
