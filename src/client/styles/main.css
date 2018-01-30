@@ -1,3 +1,5 @@
+@import './fonts.css';
+
 :root {
   --purple: hsl(247, 100%, 66%);
   --green: hsl(115, 63%, 49%);
@@ -488,6 +490,7 @@ symbol {
   align-items: center;
   padding: 0;
   margin: 1.5em 0;
+  max-width: 72ch;
 
   >* {
     max-width: 30em;
