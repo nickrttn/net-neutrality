@@ -9,7 +9,7 @@ const margin = {
   top: 0,
   right: 0,
   bottom: 0 * 18,
-  left: 7 * 18,
+  left: 7.5 * 18,
 };
 
 module.exports = function() {
