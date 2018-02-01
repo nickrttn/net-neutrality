@@ -485,6 +485,10 @@ symbol {
         }
       }
 
+      li.active {
+        display: block;
+      }
+
       li:target {
         display: block;
       }

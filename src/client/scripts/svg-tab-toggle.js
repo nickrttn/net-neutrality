@@ -1,9 +1,12 @@
-let previousTarget;
+let previousTarget = document.querySelector('a[href="#data-control"]');
+let firstTab;
 
 function SVGTabToggle() {
   const root = document.querySelector('[data-component="svg-tab-toggle"]');
 
   const tabLinks = root.querySelectorAll("svg > a");
+
+  firstTab = root.querySelector('li.active');
 
   tabLinks.forEach(link => {
     // remove existing
@@ -17,11 +20,14 @@ function SVGTabToggle() {
 function onclick(evt) {
   const { currentTarget: target } = evt;
 
+  if (firstTab) {
+    firstTab.classList.remove('active');
+    firstTab = null;
+  }
+
   if (previousTarget) {
     previousTarget.classList.remove("active");
   }
-
-  console.log(target);
 
   target.classList.add("active");
   previousTarget = target;
